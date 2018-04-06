@@ -1,0 +1,155 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.9.1
+RVersion: 3.4.3
+Repos: CRAN=https://cran.rstudio.com/
+
+Package: DEoptimR
+Source: CRAN
+Version: 1.0-8
+Hash: adc74e88e85eabe6c7d73db6a86fe6cf
+
+Package: LPCM
+Source: CRAN
+Version: 0.45-0
+Hash: bbd2dee970c57f19ed653f4cba471bf7
+
+Package: MASS
+Source: CRAN
+Version: 7.3-49
+Hash: 01a2feb0d02f446a8337f5fa310fb498
+
+Package: Matrix
+Source: CRAN
+Version: 1.2-13
+Hash: e91bfaf0e19c31c00adf454e19676ed7
+Requires: lattice
+
+Package: RSpectra
+Source: CRAN
+Version: 0.12-0
+Hash: bb689c660d1d1215c990af57630ad0a6
+Requires: Matrix, Rcpp, RcppEigen
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.16
+Hash: 8cc9dc88c11acdcf8a6dec4a0f1500bc
+
+Package: RcppEigen
+Source: CRAN
+Version: 0.3.3.4.0
+Hash: 134344925b2aff5e2522ae707a55b0f8
+Requires: Matrix, Rcpp
+
+Package: Rmixmod
+Source: CRAN
+Version: 2.1.1
+Hash: d1b19fb804ba62e775d7931a608e37c1
+Requires: Rcpp
+
+Package: apcluster
+Source: CRAN
+Version: 1.4.5
+Hash: c5a7e48f72c5965d453110aade2824de
+Requires: Matrix, Rcpp
+
+Package: class
+Source: CRAN
+Version: 7.3-14
+Hash: 98330808284e70f0bce1f8ff419d4032
+Requires: MASS
+
+Package: cluster
+Source: CRAN
+Version: 2.0.7
+Hash: 7fc42e80d7b5b98d45dedfc038b60c0c
+
+Package: diptest
+Source: CRAN
+Version: 0.75-7
+Hash: de93e5330ff45c5795d0bae12c8a9695
+
+Package: expm
+Source: CRAN
+Version: 0.999-2
+Hash: e8f4ac7e9f15ec8b84b4f7ee5ab3104f
+Requires: Matrix
+
+Package: flexmix
+Source: CRAN
+Version: 2.3-14
+Hash: 7664d705ce1d61d0c1b58df0ed4aa490
+Requires: lattice, modeltools, nnet
+
+Package: fpc
+Source: CRAN
+Version: 2.1-11
+Hash: bbef86ebcd4c867139dcfa807a98a115
+Requires: MASS, class, cluster, diptest, flexmix, kernlab, mclust,
+    mvtnorm, prabclus, robustbase, trimcluster
+
+Package: kernlab
+Source: CRAN
+Version: 0.9-25
+Hash: bf60122a2e1f073661edb69651a682c2
+
+Package: lattice
+Source: CRAN
+Version: 0.20-35
+Hash: 26b9d7f0d0cb4e1d1bbb97f867c82d89
+
+Package: mclust
+Source: CRAN
+Version: 5.4
+Hash: 1a9178a14010144db0d8d3dd40eca3f2
+
+Package: modeltools
+Source: CRAN
+Version: 0.2-21
+Hash: 3dc03397b2a4375c8a5e5f09c8cf0ae1
+
+Package: mvtnorm
+Source: CRAN
+Version: 1.0-7
+Hash: 8ec337a3f6cfc7d634c648262d80075f
+
+Package: nnet
+Source: CRAN
+Version: 7.3-12
+Hash: 42c83a1f063b40fd8bb6ad68ed528aa5
+
+Package: packrat
+Source: github
+Version: 0.4.9-1
+Hash: 2b4edf59823bbc14c9c70948a3b49926
+GithubRepo: packrat
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: f98789177c02b3066144dfb8c39ea67d681fd73c
+RemoteHost: https://api.github.com
+RemoteRepo: packrat
+RemoteUsername: rstudio
+RemoteSha: f98789177c02b3066144dfb8c39ea67d681fd73c
+
+Package: prabclus
+Source: CRAN
+Version: 2.2-6
+Hash: e646245afbb6b8ed25e22e8a76b781cd
+Requires: MASS, mclust
+
+Package: rARPACK
+Source: CRAN
+Version: 0.11-0
+Hash: f242bda2c0b97622ce2f91bfa3a3321c
+Requires: RSpectra
+
+Package: robustbase
+Source: CRAN
+Version: 0.92-8
+Hash: 47f671cf700fbaa2015bb61701e6f7f4
+Requires: DEoptimR
+
+Package: trimcluster
+Source: CRAN
+Version: 0.1-2
+Hash: 662a899a1377c7d3f2cef1722e335aff
