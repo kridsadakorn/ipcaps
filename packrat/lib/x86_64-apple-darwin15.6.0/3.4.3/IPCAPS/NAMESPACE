@@ -1,0 +1,4 @@
+import(Matrix,expm,fpc,Rmixmod,LPCM,apcluster,rARPACK)
+
+#exportPattern("^[[:alpha:]]+")
+export(ipcaps,cal.PC.linear,fst.hudson,fst.each.snp.hudson,plot.3views,rubikClust,top.discriminator,get.node.info)

@@ -1,0 +1,21 @@
+IPCAPS-package          IPCAPS - Iterative Pruning to CApture
+                        Population Structure
+cal.PC.linear           A function for linear principal component
+                        analysis (PCA)
+fst.each.snp.hudson     A function for fixation index (Fst) calculation
+                        for all SNPs between two groups.
+fst.hudson              A function for average fixation index (Fst)
+                        calculation between two groups.
+get.node.info           A function to obtain the information for
+                        specified node.
+ipcaps                  A function for unsupervised clustering to
+                        capture population structure based on iterative
+                        pruning.
+plot.3views             A function to create scatter plots in three
+                        views.
+rubikClust              A function for unsupervised clustering to
+                        detect rough structures and outliers.
+simSNP                  Synthetic dataset containing single nucleotide
+                        polymorphisms (SNP) and population labels.
+top.discriminator       A function to detect top discriminators between
+                        two groups.
