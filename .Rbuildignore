@@ -13,3 +13,4 @@ TODO
 .travis.yml
 ^\.travis\.yml$
 .gitlab-ci.yml
+cluster_output*/
