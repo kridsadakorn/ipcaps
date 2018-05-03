@@ -2,11 +2,11 @@
 ## IPCAPS Library
 ## Author: Kridsadakorn Chaichoompu
 ## Description:
-##    This code is a part of Iterative Pruning to CApture Population 
+##    This code is a part of Iterative Pruning to CApture Population
 ##    Structure (IPCAPS) Library
-##    
+##
 ##Licence: GPL V3
-## 
+##
 ##    Copyright (C) 2016  Kridsadakorn Chaichoompu
 ##
 ##    This program is free software: you can redistribute it and/or modify
@@ -23,17 +23,17 @@
 ##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 postprocess <- function( result.dir, reanalysis=FALSE){
-  
+
   file.name = file.path(result.dir,"RData","leafnode.RData")
   load(file=file.name)
   file.name = file.path(result.dir,"RData","condition.RData")
   load(file=file.name)
-  
+
   if (length(leaf.node) == 0){
     leaf.node = c(1)
-    save(leaf.node,file=file.name)
+    save(leaf.node,file=file.name, compress = 'bzip2')
   }
-  
+
   #Generate HTML output file
   cluster.tab = export.groups(result.dir)
   save.html(result.dir)
@@ -42,7 +42,7 @@ postprocess <- function( result.dir, reanalysis=FALSE){
   }
   cat("The result files were saved at: ",result.dir,"\n")
   return (cluster.tab)
-  
+
 }
 
 

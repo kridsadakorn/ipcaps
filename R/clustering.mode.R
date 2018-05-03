@@ -2,11 +2,11 @@
 ## IPCAPS Library
 ## Author: Kridsadakorn Chaichoompu
 ## Description:
-##    This code is a part of Iterative Pruning to CApture Population 
+##    This code is a part of Iterative Pruning to CApture Population
 ##    Structure (IPCAPS) Library
-##    
+##
 ##Licence: GPL V3
-## 
+##
 ##    Copyright (C) 2016  Kridsadakorn Chaichoompu
 ##
 ##    This program is free software: you can redistribute it and/or modify
@@ -24,15 +24,15 @@
 
 clustering.mode <- function(node,work.dir,method){
   start.time = Sys.time()
-  
+
   cat(paste0("Node ",node,": Start clustering\n"))
-  
-  
+
+
   #load experiment condition
   file.name = file.path(work.dir,"RData",paste0("node",node,".RData"))
   cat(paste0("Node ",node,": Loading ",file.name,"\n"))
   load(file=file.name)
-  
+
   if (method == "clara"){
     cl=pamk(PCs,krange=2:2,usepam=FALSE)
     cluster=cl$pamobject$clustering
@@ -59,9 +59,9 @@ clustering.mode <- function(node,work.dir,method){
     hc=hclust(dis, method = "complete")
     cluster=cutree(hc, k=2)
   }else if (method == "rubikclust"){
-    cluster=rubikClust(PCs[,1:3],min.space = 0.15)
+    cluster=rubikclust(PCs[,1:3],min.space = 0.15)
   }else{#default Mixed clustering methods
-    cluster=rubikClust(PCs[,1:3])
+    cluster=rubikclust(PCs[,1:3])
     if (length(unique(cluster)) == 1){ #swith to mixmod
       subPCs=as.data.frame(PCs[,1:no.significant.PC])
       mmc <- mixmodCluster(data=subPCs,nbCluster=1:3,criterion=c("BIC","ICL","NEC"),models=NULL)
@@ -74,7 +74,7 @@ clustering.mode <- function(node,work.dir,method){
   cat(paste0("Node ",node,": done for clustering\n"))
   print(end.time - start.time)
   return(cluster)
-  
+
 }
 
 

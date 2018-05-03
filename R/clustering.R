@@ -2,11 +2,11 @@
 ## IPCAPS Library
 ## Author: Kridsadakorn Chaichoompu
 ## Description:
-##    This code is a part of Iterative Pruning to CApture Population 
+##    This code is a part of Iterative Pruning to CApture Population
 ##    Structure (IPCAPS) Library
-##    
+##
 ##Licence: GPL V3
-## 
+##
 ##    Copyright (C) 2016  Kridsadakorn Chaichoompu
 ##
 ##    This program is free software: you can redistribute it and/or modify
@@ -22,10 +22,10 @@
 ##    You should have received a copy of the GNU General Public License
 ##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method="mix", min.in.group=20, 
+clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method="mix", min.in.group=20,
                         datatype="snp", nonlinear = FALSE){
 
-  #the function for check which nodes are linked 
+  #the function for check which nodes are linked
   #a purpose to use with Fst matrix
   #mymatrix is the Fst matrix of all pairs of population
   #X is the index of column to check, 1 to maximum number of column of mymatrix
@@ -53,68 +53,70 @@ clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method
       return(tmp)
     }
   }
-  
+
   load(file.path(result.dir,"RData","condition.RData"))
-  
+
   index=dataframe$index
   label=dataframe$label
-  
+
   if (length(index) < min.in.group){
-    cat(paste0("Node ",node,": A number of node is lower than the minimum number (",min.in.group,"), therefore split was not performed\n"))   
+    cat(paste0("Node ",node,": A number of node is lower than the minimum number (",min.in.group,"), therefore split was not performed\n"))
     file.name = file.path(result.dir,"RData",paste0("node",node,".RData"))
     PCs=NA
     eigen.value=NA
     eigen.fit=NA
-    save(PCs,eigen.value,eigen.fit,threshold,label,index,file=file.name)
+    save(PCs,eigen.value,eigen.fit,threshold,label,index,file=file.name,
+         compress = 'bzip2')
     #case of status = 1, no split, stopping criteria are met
     ret = list("status"=1)
   }else{
-    
+
     X = as.matrix(dataframe$raw.data)
-    
+
     cat(paste0("Node ",node,": Reducing matrix\n"))
-    
+
     res = NA
-    
+
     if (nonlinear == FALSE){
-   
-      PCobj = cal.PC.linear(X,no.pc=min.in.group,data.type=datatype,PCscore=F)
+
+      PCobj = cal.pc.linear(X,no.pc=min.in.group,data.type=datatype,PCscore=F)
       PCs=PCobj$PC
       eigen.value = PCobj$evalue
-      
+
       res = check.stopping(eigen.value,threshold)
-      
+
       eigen.fit = res$eigen.fit
       no.significant.PC = res$no.significant.PC
       threshold = res$threshold
-      
+
     }else{ #for Non-linear PCs
       # PC.non = cal.PC.non.linear(X, no.pc = min.in.group, method="kpca")
       # PC.non = cal.PC.non.linear(X, no.pc = min.in.group, method="other")
       # PCs=PC.non$PC
       # eigen.value = PC.non$evalue
-      # 
+      #
       # res = list("status" = 0)
       # eigen.fit = NA
       # no.significant.PC = 3
       # threshold = threshold
     }
-    
+
 
     ####Save result files
     file.name = file.path(result.dir,"RData",paste0("node",node,".RData"))
-    save(PCs,eigen.value,eigen.fit,threshold,label,index,no.significant.PC,file=file.name)
+    save(PCs,eigen.value,eigen.fit,threshold,label,index,no.significant.PC,
+         file=file.name, compress = 'bzip2')
     cat(paste0("Node ",node,": EigenFit = ",eigen.fit,", Threshold = ",threshold,", no. significant PCs = ",no.significant.PC,"\n"))
     ####End of saving result files
     #returned status from check stopping criteria, status = 1 means stop
     if (res$status == 0){
       #multiple testing for split
-      
+
       start.time <- Sys.time()
 
       running.method = method
       cluster = clustering.mode(node=node,work.dir=result.dir,method=running.method)
-      
+
       new.index = list()
       new.local.index = list()
       length.index = c()
@@ -123,11 +125,11 @@ clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method
         new.index[[i]] = index[which(cluster==i)]
         length.index = c(length.index,length(new.index[[i]]))
       }
-      
+
 
       #Check for Fst at least 0.0008, only for SNP
       no.cluster = length(new.index)
-      
+
       if ((no.cluster > 1) && (datatype == 'snp')){
         X = as.matrix(dataframe$raw.data)
         fst.mat = matrix(rep(1,no.cluster*no.cluster),byrow = T,nrow = no.cluster)
@@ -139,7 +141,7 @@ clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method
             fst.mat[j,i] = fst
           }
         }
-        
+
         current.group.no = 0
         tmp.index = list()
         length.tmp = c()
@@ -153,21 +155,21 @@ clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method
               tmp.vec = c(tmp.vec,new.index[[j]])
               marked.as.group[j] = current.group.no
             }
-            
+
             tmp.index[[current.group.no]] = sort(tmp.vec)
             length.tmp = c(length.tmp,length(tmp.vec))
           }
         }
-        
+
         new.index = tmp.index
-        
+
       }
-      
-  
+
+
       end.time <- Sys.time()
       time.taken <- end.time - start.time
       cat(paste0("Node ",node," times took ",time.taken," secs\n"))
-      
+
      if (length(new.index) > 1){
         cat(paste0("Node ",node,": ",length(index)," individuals were splitted into: ",length(new.index)," groups\n"))
         ret = list("status"=0,"node"=node,"new.index"=new.index)
