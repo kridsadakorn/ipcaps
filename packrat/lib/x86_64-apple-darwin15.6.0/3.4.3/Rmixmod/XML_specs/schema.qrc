@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>project.xsd</file>
-        <file>parameter.xsd</file>
-        <file>data.xsd</file>
-        <file>label_or_partition.xsd</file>
-	<file>weights.xsd</file>
-	</qresource>
-</RCC>
