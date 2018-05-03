@@ -10,6 +10,7 @@ MixmodDAResults-class   Constructor of ['MixmodDAResults'] class
 MixmodLearn-class       Constructor of ['MixmodLearn'] class
 MixmodPredict-class     Constructor of ['MixmodPredict'] class
 MixmodResults-class     Constructor of ['MixmodResults'] class
+MixmodXmlCheck-class    Constructor of ['MixmodXmlCheck'] class
 MixmodXmlInput-class    Constructor of ['MixmodXmlInput'] class
 Model-class             Constructor of ['Model'] class
 MultinomialModel-class
@@ -27,6 +28,7 @@ barplotCluster          Barplot of a class ['MixmodResults']
 birds                   Qualitative data : morphological description of
                         birds
 car                     Qualitative data : Car Evaluation
+clusteringMain          clusteringMain
 composeModelName        Get the heterogeneous model name using Gaussian
                         and Multnomial model name
 finance                 Composite data : Financial health of companies
@@ -40,24 +42,30 @@ is.dataType             Say if a data frame is quantitative,
                         qualitative or composite
 isQualitative           Say if a data frame contains only qualitative
                         variables.
+learnMain               learnMain
 mixmodCluster           Create an instance of the ['MixmodCluster']
                         class
 mixmodCompositeModel    Create an instance of the ['CompositeModel']
                         class
 mixmodGaussianModel     Create an instance of the ['GaussianModel']
                         class
-mixmodLearn             Create an instance of the ['MixmodLearn'] class
+mixmodLearn             mixmodLearn
+mixmodLearn.default     Create an instance of the ['MixmodLearn'] class
 mixmodMultinomialModel
                         Create an instance of the ['MultinomialModel']
                         class
-mixmodPredict           Create an instance of the ['MixmodPredict']
-                        class
+mixmodPredict           mixmodPredict
 mixmodStrategy          Create an instance of ['Strategy'] class
-mixmodXmlInput          Internal. It's use is not recommended.
+mixmodXmlCheck          mixmodXmlCheck
+mixmodXmlInput          mixmodXmlInput
+mixmodXmlLoad           mixmodXmlLoad
 nbFactorFromData        Get the number of modalities for each column of
                         a categorical data set
+oldmixmodPredict        Create an instance of the ['MixmodPredict']
+                        class
 plot                    Plotting of a class ['Mixmod']
 plotCluster             Plotting of a class ['MixmodResults']
+predictMain             predictMain
 print                   Print a Rmixmod class to standard output.
 show                    Show description of a Rmixmod class to standard
                         output.
@@ -66,3 +74,4 @@ sortByCriterion         Sorting results of a ['Mixmod'] object by a
 summary                 Produce result summaries of a Rmixmod class
 titanic                 Qualitative data: Survival of passengers on the
                         Titanic
+xMain                   xMain
