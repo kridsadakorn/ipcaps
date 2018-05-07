@@ -1,4 +1,4 @@
-#' (Internal function) Post processing step of IPCAPS
+#' (Internal function) Perform the pre-processing step of IPCAPS
 #'
 #' @param files IPCAPS supports SNPs encoded as 0, 1 and 2 (dosage encoding).
 #' Rows represent SNPs and columns represent subjects. Each column needs to be

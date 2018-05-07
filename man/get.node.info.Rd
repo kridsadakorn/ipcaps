@@ -2,7 +2,7 @@
 % Please edit documentation in R/get.node.info.R
 \name{get.node.info}
 \alias{get.node.info}
-\title{Getting the information for specified node}
+\title{Get the information for specified node}
 \usage{
 get.node.info(cluster.obj, node)
 }

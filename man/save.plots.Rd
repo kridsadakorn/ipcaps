@@ -14,10 +14,10 @@ from the \code{\link{ipcaps}} function.}
 \code{NULL}
 }
 \description{
-This function is used to generate HTML files and all image files
-(plots) from the result of \code{\link{ipcaps}}. The clustering result is
-shown as a tree rendering by the online Google Organizational Chart library.
-Note that the Internet is required to view the HTML files.
+Generate HTML files and all image files (plots) from the result
+of \code{\link{ipcaps}}. The clustering result is shown as a tree rendering
+by the online Google Organizational Chart library. Note that the Internet is
+required to view the HTML files.
 }
 \details{
 This function generates all plots and saves as image files in the

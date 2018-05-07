@@ -2,7 +2,7 @@
 % Please edit documentation in R/process.each.node.R
 \name{process.each.node}
 \alias{process.each.node}
-\title{(Internal function) Iterative process for each node}
+\title{(Internal function) Perform the iterative process for each node}
 \usage{
 process.each.node(node, work.dir)
 }
@@ -16,5 +16,5 @@ analyzed.}
 \code{NULL}
 }
 \description{
-(Internal function) Iterative process for each node
+(Internal function) Perform the iterative process for each node
 }

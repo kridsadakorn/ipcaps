@@ -1,5 +1,5 @@
 
-#' (Internal function) Post processing step of IPCAPS
+#' (Internal function) Perform the post-processing step of IPCAPS
 #'
 #' @param result.dir A result directory as the \code{$output} object returned
 #' from the \code{\link{ipcaps}} function.

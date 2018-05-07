@@ -14,10 +14,10 @@ from the \code{\link{ipcaps}} function.}
 \code{NULL}
 }
 \description{
-This function is used to generate HTML file called
-'tree_text.html' from the result of \code{\link{ipcaps}}. The clustering result is
-shown as a tree rendering by the online Google Organizational Chart library.
-Note that the Internet is required to view the HTML file.
+Generate HTML file called 'tree_text.html' from the result of
+\code{\link{ipcaps}}. The clustering result is shown as a tree rendering by
+the online Google Organizational Chart library. Note that the Internet is
+required to view the HTML file.
 }
 \details{
 This function generates the file called 'tree_text.html' in the

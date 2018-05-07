@@ -1,4 +1,4 @@
-#' (Internal function) Iterative process for each node
+#' (Internal function) Perform the iterative process for each node
 #'
 #' @param node An integer representing the current node number which is being
 #' analyzed.

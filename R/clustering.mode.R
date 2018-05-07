@@ -1,6 +1,6 @@
 
 
-#' (Internal function) Selecting a clustering method to be used for the IPCAPS
+#' (Internal function) Select a clustering method to be used for the IPCAPS
 #' process.
 #'
 #' @param node An integer representing the current node number which is being

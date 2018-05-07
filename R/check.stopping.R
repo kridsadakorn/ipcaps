@@ -1,5 +1,5 @@
 
-#' (Internal function) Checking whether the IPCAPS process meets the stopping
+#' (Internal function) Check whether the IPCAPS process meets the stopping
 #' criterion.
 #'
 #' @param eigen.value A vector of Eigenvalues return from \code{\link{svd}}

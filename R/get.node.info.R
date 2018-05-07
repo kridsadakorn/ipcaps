@@ -1,5 +1,5 @@
 
-#' Getting the information for specified node
+#' Get the information for specified node
 #'
 #' @description This function is used to obtain the information for specified
 #' node from the output list of \code{\link{ipcaps}}.

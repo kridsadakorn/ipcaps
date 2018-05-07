@@ -2,7 +2,7 @@
 % Please edit documentation in R/ipcaps.R
 \name{ipcaps}
 \alias{ipcaps}
-\title{A function for unsupervised clustering to capture population structure based on iterative pruning.}
+\title{Perform unsupervised clustering to capture population structure based on iterative pruning}
 \usage{
 ipcaps(bed = NA, rdata = NA, files = NA, label.file = NA, lab.col = 1,
   out, plot.as.pdf = FALSE, method = "mix", missing = NA,

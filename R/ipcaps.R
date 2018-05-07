@@ -1,4 +1,4 @@
-#' A function for unsupervised clustering to capture population structure based on iterative pruning.
+#' Perform unsupervised clustering to capture population structure based on iterative pruning
 #'
 #' @description This version supports ordinal data which can be applied directly
 #' to SNP data to identify fine-scale population structure. It was built on the

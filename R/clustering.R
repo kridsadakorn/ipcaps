@@ -1,5 +1,5 @@
 
-#' (Internal function) Clustering process of IPCAPS
+#' (Internal function) Perform the clustering process of IPCAPS
 #'
 #' @param dataframe A data frame containing \code{raw.data} (matrix or data
 #' frame), \code{label} (vector), and \code{index} (vector). \code{raw.data}

@@ -4,10 +4,9 @@
 \name{IPCAPS-package}
 \alias{IPCAPS}
 \alias{IPCAPS-package}
-\title{IPCAPS - Iterative Pruning to CApture Population Structure}
+\title{IPCAPS : Iterative Pruning to CApture Population Structure}
 \description{
-The R package IPCAPS (Iterative Pruning to CApture Population Structure) is
-an unsupervised clustering algorithm based on iterative pruning to capture
+IPCAPS is an unsupervised clustering algorithm based on iterative pruning to capture
 population structure. This version supports ordinal data which can be applied
 directly to SNP data to identify fine-level population structure and it is
 built on the iterative pruning Principal Component Analysis (ipPCA) algorithm

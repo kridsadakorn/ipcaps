@@ -2,7 +2,7 @@
 % Please edit documentation in R/preprocess.R
 \name{preprocess}
 \alias{preprocess}
-\title{(Internal function) Post processing step of IPCAPS}
+\title{(Internal function) Perform the pre-processing step of IPCAPS}
 \usage{
 preprocess(files, label.fname, lab.col, rdata.infile, bed.infile, cate.list,
   result.dir, threshold, min.fst, max.thread = NA, reanalysis = FALSE,
@@ -102,5 +102,5 @@ cluster_out, cluster_out1, cluster_out2, etc.}
 A data frame of input data.
 }
 \description{
-(Internal function) Post processing step of IPCAPS
+(Internal function) Perform the pre-processing step of IPCAPS
 }

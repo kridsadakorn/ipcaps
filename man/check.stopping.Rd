@@ -2,7 +2,7 @@
 % Please edit documentation in R/check.stopping.R
 \name{check.stopping}
 \alias{check.stopping}
-\title{(Internal function) Checking whether the IPCAPS process meets the stopping
+\title{(Internal function) Check whether the IPCAPS process meets the stopping
 criterion.}
 \usage{
 check.stopping(eigen.value, threshold)
@@ -29,7 +29,7 @@ principal components (PC).
 }
 }
 \description{
-(Internal function) Checking whether the IPCAPS process meets the stopping
+(Internal function) Check whether the IPCAPS process meets the stopping
 criterion.
 }
 \examples{

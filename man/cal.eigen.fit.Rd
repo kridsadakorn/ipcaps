@@ -2,7 +2,8 @@
 % Please edit documentation in R/parallelization.R
 \name{cal.eigen.fit}
 \alias{cal.eigen.fit}
-\title{(Internal function) For parallelization purpose, to calculae a vector of EigenFit values}
+\title{(Internal function) Calculae a vector of EigenFit values, internally used for
+parallelization}
 \usage{
 cal.eigen.fit(eigen.value)
 }
@@ -15,7 +16,8 @@ cal.eigen.fit(eigen.value)
 A vector of all possible values for EigenFit.
 }
 \description{
-(Internal function) For parallelization purpose, to calculae a vector of EigenFit values
+(Internal function) Calculae a vector of EigenFit values, internally used for
+parallelization
 }
 \examples{
  X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)

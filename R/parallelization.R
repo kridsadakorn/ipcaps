@@ -1,4 +1,5 @@
-#' (Internal function) For parallelization purpose, to check the different value of X and Y
+#' (Internal function) Check the different value of X and Y, internally used for
+#' parallelization
 #'
 #' @param x The first number
 #' @param y The second number
@@ -14,7 +15,8 @@ diff.xy = function(x,y){
   return(ret)
 }
 
-#' (Internal function) For parallelization purpose, to calculae a vector of EigenFit values
+#' (Internal function) Calculae a vector of EigenFit values, internally used for
+#' parallelization
 #'
 #' @param eigen.value A vector of Eigenvalues return from \code{\link{svd}}
 #' ($d), \code{\link{rARPACK::svds}} ($d),  \code{\link{eigen}}
@@ -35,8 +37,8 @@ cal.eigen.fit = function(eigen.value){
   return(ret)
 }
 
-#' (Internal function) For parallelization purpose, to calculae a vector of
-#' different values from a vector of EigenFit values
+#' (Internal function) Calculate a vector of different values from a vector of
+#' EigenFit values, internally used for parallelization
 #'
 #' @param eigen.value A vector of Eigenvalues return from \code{\link{svd}}
 #' ($d), \code{\link{rARPACK::svds}} ($d),  \code{\link{eigen}}

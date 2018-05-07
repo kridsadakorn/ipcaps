@@ -2,8 +2,8 @@
 % Please edit documentation in R/parallelization.R
 \name{diff.eigen.fit}
 \alias{diff.eigen.fit}
-\title{(Internal function) For parallelization purpose, to calculae a vector of
-different values from a vector of EigenFit values}
+\title{(Internal function) Calculate a vector of different values from a vector of
+EigenFit values, internally used for parallelization}
 \usage{
 \method{diff}{eigen.fit}(eigen.value)
 }
@@ -16,8 +16,8 @@ different values from a vector of EigenFit values}
 A vector of different values from a vector of EigenFit values
 }
 \description{
-(Internal function) For parallelization purpose, to calculae a vector of
-different values from a vector of EigenFit values
+(Internal function) Calculate a vector of different values from a vector of
+EigenFit values, internally used for parallelization
 }
 \examples{
  X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)

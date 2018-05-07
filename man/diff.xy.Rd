@@ -2,7 +2,8 @@
 % Please edit documentation in R/parallelization.R
 \name{diff.xy}
 \alias{diff.xy}
-\title{(Internal function) For parallelization purpose, to check the different value of X and Y}
+\title{(Internal function) Check the different value of X and Y, internally used for
+parallelization}
 \usage{
 \method{diff}{xy}(x, y)
 }
@@ -15,7 +16,8 @@
 The different number of \code{x} and \code{y}.
 }
 \description{
-(Internal function) For parallelization purpose, to check the different value of X and Y
+(Internal function) Check the different value of X and Y, internally used for
+parallelization
 }
 \examples{
 print(diff.xy(2.4,6.7))

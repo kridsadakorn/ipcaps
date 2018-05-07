@@ -2,7 +2,7 @@
 % Please edit documentation in R/postprocess.R
 \name{postprocess}
 \alias{postprocess}
-\title{(Internal function) Post processing step of IPCAPS}
+\title{(Internal function) Perform the post-processing step of IPCAPS}
 \usage{
 postprocess(result.dir, reanalysis = FALSE)
 }
@@ -25,5 +25,5 @@ below for more details:
 }
 }
 \description{
-(Internal function) Post processing step of IPCAPS
+(Internal function) Perform the post-processing step of IPCAPS
 }

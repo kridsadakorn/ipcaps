@@ -1,10 +1,10 @@
 
 #' Workflow to generate HTML files for all kinds of plots
 #'
-#' @description This function is used to generate HTML files and all image files
-#' (plots) from the result of \code{\link{ipcaps}}. The clustering result is
-#' shown as a tree rendering by the online Google Organizational Chart library.
-#' Note that the Internet is required to view the HTML files.
+#' @description Generate HTML files and all image files (plots) from the result
+#' of \code{\link{ipcaps}}. The clustering result is shown as a tree rendering
+#' by the online Google Organizational Chart library. Note that the Internet is
+#' required to view the HTML files.
 #'
 #' @param output.dir A result directory as the \code{$output} object returned
 #' from the \code{\link{ipcaps}} function.

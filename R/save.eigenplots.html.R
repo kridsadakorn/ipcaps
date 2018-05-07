@@ -1,11 +1,11 @@
 
 #' Generate HTML file for EigenFit plots
 #'
-#' @description This function is used to generate HTML file called
-#' 'tree_scree.html' from the result of \code{\link{ipcaps}}. This function is a part
-#' of workflow in \code{\link{save.plots}}. The clustering result is shown as a tree
-#' rendering by the online Google Organizational Chart library. Note that the
-#' Internet is required to view the HTML file.
+#' @description Generate HTML file called 'tree_scree.html' from the result of
+#' \code{\link{ipcaps}}. This function is a part of workflow in
+#' \code{\link{save.plots}}. The clustering result is shown as a tree rendering
+#' by the online Google Organizational Chart library. Note that the Internet is
+#' required to view the HTML file.
 #'
 #' @param output.dir A result directory as the \code{$output} object returned
 #' from the \code{\link{ipcaps}} function.

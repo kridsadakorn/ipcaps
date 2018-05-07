@@ -2,7 +2,7 @@
 % Please edit documentation in R/clustering.R
 \name{clustering}
 \alias{clustering}
-\title{(Internal function) Clustering process of IPCAPS}
+\title{(Internal function) Perform the clustering process of IPCAPS}
 \usage{
 clustering(dataframe, node = 1, result.dir, threshold, min.fst,
   method = "mix", min.in.group = 20, datatype = "snp",
@@ -50,5 +50,5 @@ split from \code{dataframe$index} according to a clustering result.
 }
 }
 \description{
-(Internal function) Clustering process of IPCAPS
+(Internal function) Perform the clustering process of IPCAPS
 }
