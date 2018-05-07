@@ -1,26 +1,40 @@
-##########################################################################
-## IPCAPS Library
-## Author: Kridsadakorn Chaichoompu
-## Description:
-##    This code is a part of Iterative Pruning to CApture Population 
-##    Structure (IPCAPS) Library
-##    
-##Licence: GPL V3
-## 
-##    Copyright (C) 2016  Kridsadakorn Chaichoompu
-##
-##    This program is free software: you can redistribute it and/or modify
-##    it under the terms of the GNU General Public License as published by
-##    the Free Software Foundation, either version 3 of the License, or
-##    (at your option) any later version.
-##
-##    This program is distributed in the hope that it will be useful,
-##    but WITHOUT ANY WARRANTY; without even the implied warranty of
-##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##    GNU General Public License for more details.
-##
-##    You should have received a copy of the GNU General Public License
-##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#' Getting the information for specified node
+#'
+#' @description This function is used to obtain the information for specified
+#' node from the output list of \code{\link{ipcaps}}.
+#'
+#' @param cluster.obj A list returned from the \code{\link{ipcaps}} function.
+#' @param node An integer representing a node number to enquire information as
+#' shown in the HTML output files.
+#'
+#' @return The return value is \code{NULL} if node's information does not exist or a list containing
+#' \code{PCs}, \code{eigen.fit}, \code{index}, and \code{label} as explained
+#' below:
+#' \itemize{
+#' \item \code{$PCs} is a matrix of pricipal components of this node.
+#' \item \code{$eigen.fit} is a number represeting the EigenFit value of this
+#' node.
+#' \item \code{$index} is a vector of row number (individuals) of \code{raw.data} (input data).
+#' \item \code{$label} is the vector of labels of all individuals that belongs
+#' to this node.
+#' }
+#'
+#' @export
+#'
+#' @examples
+#'
+#' # Importantly, bed file, bim file, and fam file are required
+#' # Use the example files embedded in the package
+#'
+#' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
+#' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
+#'
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#'
+#' #Here, to obtain the information of specified node, for example, node 3
+#' node.info <- get.node.info(my.cluster,3)
+#' ls(node.info)
 
 get.node.info <- function(cluster.obj,node){
   if (is.null(cluster.obj$output.dir)){

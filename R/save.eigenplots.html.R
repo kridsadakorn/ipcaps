@@ -1,42 +1,57 @@
-##########################################################################
-## IPCAPS Library
-## Author: Kridsadakorn Chaichoompu
-## Description:
-##    This code is a part of Iterative Pruning to CApture Population 
-##    Structure (IPCAPS) Library
-##    
-##Licence: GPL V3
-## 
-##    Copyright (C) 2016  Kridsadakorn Chaichoompu
-##
-##    This program is free software: you can redistribute it and/or modify
-##    it under the terms of the GNU General Public License as published by
-##    the Free Software Foundation, either version 3 of the License, or
-##    (at your option) any later version.
-##
-##    This program is distributed in the hope that it will be useful,
-##    but WITHOUT ANY WARRANTY; without even the implied warranty of
-##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##    GNU General Public License for more details.
-##
-##    You should have received a copy of the GNU General Public License
-##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#' Generate HTML file for EigenFit plots
+#'
+#' @description This function is used to generate HTML file called
+#' 'tree_scree.html' from the result of \code{\link{ipcaps}}. This function is a part
+#' of workflow in \code{\link{save.plots}}. The clustering result is shown as a tree
+#' rendering by the online Google Organizational Chart library. Note that the
+#' Internet is required to view the HTML file.
+#'
+#' @param output.dir A result directory as the \code{$output} object returned
+#' from the \code{\link{ipcaps}} function.
+#'
+#' @return \code{NULL}
+#'
+#' @details This function generates the file called 'tree_scree.html' in the
+#' same result directory. All plots are generated and saved as image files in
+#' the sub-directory 'images'.
+#'
+#' @export
+#'
+#' @seealso \code{\link{save.html}},
+#' \code{\link{save.plots.html}},
+#' \code{\link{save.plots.cluster.html}},
+#' and \code{\link{save.plots.label.html}}
+#'
+#' @examples
+#'
+#' # Importantly, bed file, bim file, and fam file are required
+#' # Use the example files embedded in the package
+#'
+#' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
+#' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
+#'
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#'
+#' #Here, to generate HTML file
+#' save.eigenplots(my.cluster$output.dir)
+
 
 save.eigenplots.html <- function(output.dir){
   load(file.path(output.dir,"RData","leafnode.RData"))
   load(file.path(output.dir,"RData","tree.RData"))
   load(file.path(output.dir,"RData","condition.RData"))
   node.list = sort(tree$node)
-  
+
   txt_data = ""
   txt_leafnode = ""
-  
+
   test.dir=file.path(output.dir,"images.new")
   img.dir="images"
   if (file.exists(test.dir)){
     img.dir="images.new"
   }
-  
+
   for (i in node.list){
     parent_node = ""
     if (i > 1){
@@ -67,26 +82,27 @@ save.eigenplots.html <- function(output.dir){
     }else{
       txt_data = paste0(txt_data,"\n")
     }
-    
+
     no_idx = which(i == node.list) - 1
     if (i %in% leaf.node){
       txt_leafnode = paste0(txt_leafnode,"data.setRowProperty(",no_idx,", 'style', 'border: 3px solid #DB6E6E; background-color:#FFE1E1');\n")
     }
   }
-  
+
   txt_title = "Scree plots of Eigen values"
   txt_body = "Scree plots of Eigen values"
-  
+
   txt_html = output.template$template
   txt_html[output.template$lno_data] = txt_data
   txt_html[output.template$lno_leafnode] = txt_leafnode
   txt_html[output.template$lno_body] = txt_body
   txt_html[output.template$lno_title] = txt_title
-  
+
   fo = file(file.path(output.dir,"tree_scree.html"),"w")
   for (i in txt_html){ write(i,fo)}
   close(fo)
-  
+
+  invisible(NULL)
 }
 
 

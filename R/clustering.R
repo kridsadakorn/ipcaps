@@ -1,26 +1,37 @@
-##########################################################################
-## IPCAPS Library
-## Author: Kridsadakorn Chaichoompu
-## Description:
-##    This code is a part of Iterative Pruning to CApture Population
-##    Structure (IPCAPS) Library
-##
-##Licence: GPL V3
-##
-##    Copyright (C) 2016  Kridsadakorn Chaichoompu
-##
-##    This program is free software: you can redistribute it and/or modify
-##    it under the terms of the GNU General Public License as published by
-##    the Free Software Foundation, either version 3 of the License, or
-##    (at your option) any later version.
-##
-##    This program is distributed in the hope that it will be useful,
-##    but WITHOUT ANY WARRANTY; without even the implied warranty of
-##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##    GNU General Public License for more details.
-##
-##    You should have received a copy of the GNU General Public License
-##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#' (Internal function) Clustering process of IPCAPS
+#'
+#' @param dataframe A data frame containing \code{raw.data} (matrix or data
+#' frame), \code{label} (vector), and \code{index} (vector). \code{raw.data}
+#' represents a matrix of subset of input data. \code{label} represents a vector
+#' of labels for all rows of \code{raw.data}. \code{index} represents a vector
+#' of indexes that are selected from the original input data.
+#' @param node An integer representing the current node number which is being
+#' analyzed.
+#' @param result.dir An output directory
+#' @param threshold A threshold or a cutoff to stop the IPCAPS process. Also see
+#' \code{\link{ipcaps}} (the parameter \code{threshold}).
+#' @param min.fst A number represents a cutoff for mininum Fst value.
+#' @param method A clustering method selected from the \code{\link{ipcaps}}
+#' function. See \code{\link{ipcaps}} for available methods.
+#' @param min.in.group A integer represents a minimum number of group members.
+#' @param datatype To specify whether the input data are 'snp' or other type.
+#' Defalut = 'snp'.
+#' @param nonlinear (Unimplemented) To specify whether linear or non-linear
+#' method is used for IPCAPS analysis. If TRUE, non-linear method is used,
+#' otherwise linear method is used. Default = FALSE.
+#'
+#' @return A list containing \code{status}, \code{node}, and \code{new.index}
+#' as explained below:
+#' \itemize{
+#' \item \code{$status} is either \code{0} representing that the criterion is
+#' not met, or \code{1} representing that the criterion is met.
+#' \item \code{$node} is an integer representing the current node number which
+#' is being analyzed.
+#' \item \code{$new.index} is a list of vectors containing a subset of indexes
+#' split from \code{dataframe$index} according to a clustering result.
+#' }
+#'
 
 clustering <- function( dataframe, node=1, result.dir, threshold, min.fst,method="mix", min.in.group=20,
                         datatype="snp", nonlinear = FALSE){

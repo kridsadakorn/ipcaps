@@ -5,21 +5,21 @@ citHeader("To cite IPCAPS in publications use:")
 
 citEntry(entry = "Manual",
   title        = "IPCAPS: Iterative Pruning to Capture Population Structure",
-  author       = personList(person("Kridsadakorn", "Chaichoompu"),
-  person("Fentaw", "Abegaz"),
-  person("Sissades", "Tongsima"),
-  person("Philip", family = "Shaw", middle = "James"),
-  person("Anavaj", "Sakuntabhai"),
-  person("Luisa", "Pereira"),
-  person("Kristel", family='Van Steen')
+  author       = personList(person(given = "Kridsadakorn", family = "Chaichoompu"),
+  person(given = "Fentaw", family = "Abegaz"),
+  person(given = "Sissades", family = "Tongsima"),
+  person(given = "Philip", family = "Shaw", middle = "James"),
+  person(given = "Anavaj", family = "Sakuntabhai"),
+  person(given = "Luisa", family = "Pereira"),
+  person(given = "Kristel", family = 'Van Steen')
 ),
   year         = year,
   note         = note,
-  url          = "https://gitlab.com/kris.ccp/kris_rel",
+  url          = "https://gitlab.com/kris.ccp/ipcaps",
 
   textVersion  =
   paste0("Kridsadakorn Chaichoompu, Fentaw Abegaz, Sissades Tongsima, Philip James Shaw, Anavaj Sakuntabhai, Luisa Pereira, and Kristel Van Steen (",year,"). ",
         "KRIS: Keen and Reliable Interface Subroutines for Bioinformatic Analysis. ",
         note,
-        ". URL: https://gitlab.com/kris.ccp/kris_rel")
+        ". URL: https://gitlab.com/kris.ccp/ipcaps")
 )

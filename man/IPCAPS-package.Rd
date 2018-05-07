@@ -15,10 +15,10 @@ built on the iterative pruning Principal Component Analysis (ipPCA) algorithm
 iterative process using multiple splits based on multivariate Gaussian
 mixture modeling of principal components and Clustering EM estimation as in
 Lebret et al. (2015). In each iteration, rough clusters and outliers are also
-identified using our own method called RubikClust (R package \pkg{kris}).
+identified using our own method called RubikClust (R package \pkg{KRIS}).
 }
 \details{
-The R package \pkg{IPCAPS} requires the package \pkg{kris}.
+The R package \pkg{IPCAPS} requires the package \pkg{KRIS}.
 
 Here is the list of functions in the R package \pkg{IPCAPS}:
 \itemize{
@@ -53,6 +53,14 @@ Piriyapongsa, J., Ngamphiw, C., and Tongsima, S. (2011). Study of large and
 highly stratified population datasets by combining iterative pruning
 principal component analysis and structure. BMC Bioinformatics 12, 255.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://gitlab.com/kris.ccp/ipcaps}
+  \item Report bugs at \url{https://gitlab.com/kris.ccp/ipcaps/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Kridsadakorn Chaichoompu \email{kridsadakorn.chaichoompu@gmail.com}
 
@@ -61,7 +69,7 @@ Authors:
   \item Kristel Van Steen
   \item Fentaw Abegaz
   \item Sissades Tongsima
-  \item Philip James Shaw
+  \item Philip Shaw
   \item Anavaj Sakuntabhai
   \item Luisa Pereira
 }

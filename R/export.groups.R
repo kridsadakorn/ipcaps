@@ -1,26 +1,43 @@
-##########################################################################
-## IPCAPS Library
-## Author: Kridsadakorn Chaichoompu
-## Description:
-##    This code is a part of Iterative Pruning to CApture Population 
-##    Structure (IPCAPS) Library
-##    
-##Licence: GPL V3
-## 
-##    Copyright (C) 2016  Kridsadakorn Chaichoompu
-##
-##    This program is free software: you can redistribute it and/or modify
-##    it under the terms of the GNU General Public License as published by
-##    the Free Software Foundation, either version 3 of the License, or
-##    (at your option) any later version.
-##
-##    This program is distributed in the hope that it will be useful,
-##    but WITHOUT ANY WARRANTY; without even the implied warranty of
-##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##    GNU General Public License for more details.
-##
-##    You should have received a copy of the GNU General Public License
-##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#' Export the IPCAPS result in to a text file
+#'
+#' @description This function is used to export clustering result of
+#' \code{\link{ipcaps}} to text file called 'groups.txt'.
+#'
+#' @param result.dir A result directory as the \code{$output} object returned
+#' from the \code{\link{ipcaps}} function.
+#'
+#' @return A data frame of exported data containing 4 columns; \code{group},
+#' \code{node}, \code{label}, \code{row.number}, as described below for more
+#' details:
+#' \itemize{
+#' \item \code{group} represents group membership of IPCAPS result.
+#' \item \code{node} represents node numbers of IPCAPS result.
+#' \item \code{label} represents labels of rows in orginal input data.
+#' \item \code{row.number} represents row numbers of orginal input data.
+#' }
+#'
+#' @details This function exports the file called 'groups.txt' to the same result
+#' directory. If 'groups.txt' already exists in the result directory, the
+#' exported file is changed to 'groups1.txt', 'groups2.txt', 'groups3.txt', ...,
+#' accordingly.
+#'
+#' @export
+#'
+#' @examples
+#'
+#' # Importantly, bed file, bim file, and fam file are required
+#' # Use the example files embedded in the package
+#'
+#' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
+#' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
+#'
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#'
+#' #Here, to export the IPCAPS result to a text file
+#' exported.data <- export.groups(my.cluster$output.dir)
+#' print(dim(exported.data))
+#' head(exported.data)
 
 export.groups <- function(result.dir){
   load(file.path(result.dir,"RData","leafnode.RData"))

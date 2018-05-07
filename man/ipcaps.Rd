@@ -52,6 +52,9 @@ Large Applications), "pam" (R: Partitioning Around Medoids (PAM) Object),
 adjusted for these covariates via regression modeling and residual
 computation.}
 
+\item{cov.col.first}{Refer to a covariate file, the first covariate to be
+considered as confounding variable.}
+
 \item{cov.col.last}{Refer to a covariate file, the last covariate to be
 considered as confounding variable. All the variables in between the
 cov.col.first and cov.col.last will be considered in the adjustment process.}
@@ -68,9 +71,6 @@ subgroup. Default = 20.}
 \item{no.plot}{No plot is generated if this option is TRUE. This option is
 useful when the system does not support X Windows in the unix based system.
 Default = FALSE.}
-
-\item{ov.col.first}{Refer to a covariate file, the first covariate to be
-considered as confounding variable.}
 }
 \value{
 The function returns the list object containing 2 internal objects;

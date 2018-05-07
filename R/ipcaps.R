@@ -32,7 +32,7 @@
 #' directory already exists, result files are saved in sub-directories
 #' cluster_out, cluster_out1, cluster_out2, etc.
 #' @param plot.as.pdf To export plots as PDF. When omitted, plots are saved as PNG.
-#' @param method 	The internal clustering method. It can be set to "mix"
+#' @param method	The internal clustering method. It can be set to "mix"
 #' (rubikclust & mixmod), "mixmod" (Lebret et al., 2015), "clara" (R: Clustering
 #' Large Applications), "pam" (R: Partitioning Around Medoids (PAM) Object),
 #' "meanshift" (Wang, 2016), "apcluster" (Bodenhofer et al., 2016), and "hclust"
@@ -41,7 +41,7 @@
 #' @param covariate A file of covariates; one covariate per column. SNPs can be
 #' adjusted for these covariates via regression modeling and residual
 #' computation.
-#' @param ov.col.first Refer to a covariate file, the first covariate to be
+#' @param cov.col.first Refer to a covariate file, the first covariate to be
 #' considered as confounding variable.
 #' @param cov.col.last Refer to a covariate file, the last covariate to be
 #' considered as confounding variable. All the variables in between the
@@ -81,7 +81,8 @@
 #'
 #' @export
 #'
-#' @import Rmixmod apcluster
+#' @import Rmixmod
+#' @import apcluster
 #'
 #' @md
 #'

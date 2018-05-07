@@ -12,23 +12,86 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# IPCAPS 1.0.5.9000
-
----
-
-# IPCAPS 1.0.5
+# IPCAPS 1.0.6.0
 
 ## Fixed functions
 
-## Fixed bugs
+Removed the old RD files and added roxygen script to create manual for these functions:
+
+* ```save.plots.cluster.html``` 
+* ```save.plots.label.html``` 
+* ```save.plots``` 
+* ```top.discriminator``` 
 
 ---
 
-# IPCAPS 1.0.0.9000
+# IPCAPS 1.0.5.0
+
+## Fixed functions
+
+Removed the old RD files and added roxygen script to create manual for these functions:
+
+* ```preprocess``` 
+* ```process.each.node``` 
+* ```save.eigenplots``` 
+* ```save.html``` 
 
 ---
 
-# IPCAPS 1.0.0
+# IPCAPS 1.0.4.0
+
+## Fixed functions and objects
+
+Removed the old RD files and added roxygen script to create manual for these 
+functions and objects:
+
+* ```IPCAPS-package``` 
+* ```ipcaps``` 
+* ```output.template``` 
+* ```postprocess``` 
+
+---
+
+# IPCAPS 1.0.3.0
+
+## Fixed functions
+
+Removed the old RD files and added roxygen script to create manual for these functions:
+
+* ```diff.eigen.fit``` 
+* ```diff.xy``` 
+* ```export.groups``` 
+* ```get.node.info``` 
+
+---
+
+# IPCAPS 1.0.2.0
+
+## Fixed functions
+
+Removed the old RD files and added roxygen script to create manual for these functions:
+
+* ```cal.eigen.fit``` 
+* ```check.stopping``` 
+* ```clustering.mode``` 
+* ```clustering``` 
+
+---
+
+# IPCAPS 1.0.1.0
+
+## Fixed functions
+
+Removed the old RD files and added roxygen script to create manual for these functions:
+
+* ```cal.pc.linear``` 
+* ```cal.pc.linear``` 
+* ```cal.pc.linear``` 
+* ```cal.pc.linear``` 
+
+---
+
+# IPCAPS 1.0.0.0
 
 ## Initial functions
 

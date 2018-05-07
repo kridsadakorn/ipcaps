@@ -1,27 +1,22 @@
-##########################################################################
-## IPCAPS Library
-## Author: Kridsadakorn Chaichoompu
-## Description:
-##    This code is a part of Iterative Pruning to CApture Population
-##    Structure (IPCAPS) Library
-##
-##Licence: GPL V3
-##
-##    Copyright (C) 2016  Kridsadakorn Chaichoompu
-##
-##    This program is free software: you can redistribute it and/or modify
-##    it under the terms of the GNU General Public License as published by
-##    the Free Software Foundation, either version 3 of the License, or
-##    (at your option) any later version.
-##
-##    This program is distributed in the hope that it will be useful,
-##    but WITHOUT ANY WARRANTY; without even the implied warranty of
-##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##    GNU General Public License for more details.
-##
-##    You should have received a copy of the GNU General Public License
-##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#' (Internal function) Post processing step of IPCAPS
+#'
+#' @param result.dir A result directory as the \code{$output} object returned
+#' from the \code{\link{ipcaps}} function.
+#' @param reanalysis (Unimplemented) To specify whether it is re-analysis or not. If TRUE, it is
+#' re-analysis, otherwise it is not. Default = FALSE.
+#'
+#' @return A data frame of clustering result containing 4 columns;
+#' \code{group}, \code{node}, \code{label}, \code{row.number}, as described
+#' below for more details:
+#' \itemize{
+#' \item \code{group} represents group membership of IPCAPS result.
+#' \item \code{node} represents node numbers of IPCAPS result.
+#' \item \code{label} represents labels of rows in orginal input data.
+#' \item \code{row.number} represents row numbers of orginal input data.
+#' }
+#'
+#'
 postprocess <- function( result.dir, reanalysis=FALSE){
 
   file.name = file.path(result.dir,"RData","leafnode.RData")

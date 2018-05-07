@@ -1,27 +1,24 @@
-##########################################################################
-## IPCAPS Library
-## Author: Kridsadakorn Chaichoompu
-## Description:
-##    This code is a part of Iterative Pruning to CApture Population
-##    Structure (IPCAPS) Library
-##
-##Licence: GPL V3
-##
-##    Copyright (C) 2016  Kridsadakorn Chaichoompu
-##
-##    This program is free software: you can redistribute it and/or modify
-##    it under the terms of the GNU General Public License as published by
-##    the Free Software Foundation, either version 3 of the License, or
-##    (at your option) any later version.
-##
-##    This program is distributed in the hope that it will be useful,
-##    but WITHOUT ANY WARRANTY; without even the implied warranty of
-##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##    GNU General Public License for more details.
-##
-##    You should have received a copy of the GNU General Public License
-##    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
+#' (Internal function) Selecting a clustering method to be used for the IPCAPS
+#' process.
+#'
+#' @param node An integer representing the current node number which is being
+#' analyzed.
+#' @param work.dir A working directory.
+#' @param method A clustering method selected from the \code{\link{ipcaps}}
+#' function. See \code{\link{ipcaps}} for available methods.
+#'
+#' @return A vector of cluster assignment, for which cluster each individual
+#' belongs.
+#'
+#' @import KRIS
+#'
+#' @seealso \code{\link{ipcaps}}
+#'
+#' @examples
+#' #mydir = getwd()
+#' #clustering.mode(node = 1, work.dir = mydir, method = 'mixmod')
 clustering.mode <- function(node,work.dir,method){
   start.time = Sys.time()
 
