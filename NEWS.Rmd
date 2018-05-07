@@ -12,6 +12,17 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# IPCAPS 1.1.0.0
+
+## Updated functions
+
+* In check.stopping(), changed from 
+eigen.fit = max(eigen.fit.vec[1:2]) to 
+eigen.fit = max(eigen.fit.vec).
+This change may affect clustering result.
+
+---
+
 # IPCAPS 1.0.7.0
 
 ## Added data
@@ -32,12 +43,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * testthat/test_caleigenfit.R
 * testthat/test_checkstopping.R
-
-## Updated functions
-
-* In check.stopping(), changed from 
-eigen.fit = max(eigen.fit.vec[1:2]) to 
-eigen.fit = max(eigen.fit.vec)
 
 ---
 
