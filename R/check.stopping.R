@@ -23,10 +23,11 @@
 #' @examples
 #'  X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
 #'  print(check.stopping(X,0.1))
+#'
 check.stopping <- function(eigen.value, threshold){
 
   eigen.fit.vec = cal.eigen.fit(eigen.value)
-  eigen.fit = max(eigen.fit.vec[1:2])
+  eigen.fit = max(eigen.fit.vec)
   no.significant.PC = length(eigen.fit.vec[1:which(eigen.fit.vec == eigen.fit)[1]])
   if (no.significant.PC<3){
     no.significant.PC = 3

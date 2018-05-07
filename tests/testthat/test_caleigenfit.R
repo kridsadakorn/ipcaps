@@ -2,14 +2,17 @@ context("test cal.eigen.fit")
 
 test_that("test cal.eigen.fit",{
 
-  data(example_SNP)
+  X <- c(2.7668157, 1.8931580, 1.8859049, 1.0575971, 1.0329016, 0.9095669,
+         0.6395215, 0.5073142, 0.3205904, 0.3125665)
 
-  PCs <- cal.pc.linear(simsnp$snp, no.pc = 3)
+  res <- cal.eigen.fit(X)
 
-  expect_length(PCs, 2)
-  expect_equal(fst.pairwise[2], -0.00195062)
-  expect_type(ls(snp), "character")
+  expected_vec <- c(0.379450739, 0.003838584, 0.578408288, 0.023627539,
+                    0.127158683, 0.352248264, 0.231589695, 0.458966294,
+                    0.025346914)
 
-  save.file <- file.path(tempdir(),"new_SNP")
-  file.remove(file1)
+  expect_length(res,9)
+  expect_equal(round(res,5), round(expected_vec,5))
+  expect_type(res, "double")
+
 })

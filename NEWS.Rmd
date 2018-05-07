@@ -12,6 +12,35 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# IPCAPS 1.0.7.0
+
+## Added data
+
+* data/IPCAPS_example.RData
+* inst/extdata/IPCAPS_example.bed
+* inst/extdata/IPCAPS_example.bim
+* inst/extdata/IPCAPS_example.fam
+* inst/extdata/IPCAPS_example.individuals.txt
+* inst/extdata/IPCAPS_example_PC10.txt
+* inst/extdata/IPCAPS_example_rowVar_colInd.txt
+
+## Added R file to describe data files
+
+* R/data.R
+
+## Added unit testing
+
+* testthat/test_caleigenfit.R
+* testthat/test_checkstopping.R
+
+## Updated functions
+
+* In check.stopping(), changed from 
+eigen.fit = max(eigen.fit.vec[1:2]) to 
+eigen.fit = max(eigen.fit.vec)
+
+---
+
 # IPCAPS 1.0.6.0
 
 ## Fixed functions
