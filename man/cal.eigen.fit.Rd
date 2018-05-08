@@ -9,8 +9,8 @@ cal.eigen.fit(eigen.value)
 }
 \arguments{
 \item{eigen.value}{A vector of Eigenvalues return from \code{\link{svd}}
-($d), \code{\link{rARPACK::svds}} ($d),  \code{\link{eigen}}
-($values) or \code{\link{rARPACK::eigs}} ($values).}
+($d), \code{rARPACK::svds} ($d),  \code{\link{eigen}}
+($values) or \code{rARPACK::eigs} ($values).}
 }
 \value{
 A vector of all possible values for EigenFit.
@@ -21,5 +21,7 @@ parallelization
 }
 \examples{
  X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
- print(cal.eigen.fit(X))
+ res <- cal.eigen.fit(X)
+ print(res)
+
 }

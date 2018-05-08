@@ -33,14 +33,14 @@ the sub-directory 'images'.
 BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 
-my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 
 #Here, to generate HTML file
 save.eigenplots(my.cluster$output.dir)
 }
 \seealso{
 \code{\link{save.html}},
-\code{\link{save.plots.html}},
+\code{\link{save.plots}},
 \code{\link{save.plots.cluster.html}},
 and \code{\link{save.plots.label.html}}
 }

@@ -25,7 +25,7 @@ belongs.
 process.
 }
 \examples{
-#mydir = getwd()
+#mydir = tempdir()
 #clustering.mode(node = 1, work.dir = mydir, method = 'mixmod')
 }
 \seealso{

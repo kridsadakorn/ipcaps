@@ -42,7 +42,7 @@ group separation based on the fixation index (Fst).
 # Use the example files embedded in the package
 BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
-my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 table(my.cluster$cluster$label,my.cluster$cluster$group)
 # 1 2 3 4 5 6
 # outlier4 5 4 1 0 0 0

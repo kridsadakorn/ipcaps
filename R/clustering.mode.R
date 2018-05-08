@@ -12,18 +12,25 @@
 #' @return A vector of cluster assignment, for which cluster each individual
 #' belongs.
 #'
+#' @import stats
+#' @import fpc
+#' @import LPCM
+#' @importFrom apcluster apcluster negDistMat
+#' @importFrom Rmixmod mixmodCluster mixmodPredict
 #' @import KRIS
 #'
 #' @seealso \code{\link{ipcaps}}
 #'
 #' @examples
-#' #mydir = getwd()
+#' #mydir = tempdir()
 #' #clustering.mode(node = 1, work.dir = mydir, method = 'mixmod')
 clustering.mode <- function(node,work.dir,method){
   start.time = Sys.time()
 
   cat(paste0("Node ",node,": Start clustering\n"))
 
+  PCs <- NULL
+  no.significant.PC <- NULL
 
   #load experiment condition
   file.name = file.path(work.dir,"RData",paste0("node",node,".RData"))
@@ -49,8 +56,11 @@ clustering.mode <- function(node,work.dir,method){
     subPCs=as.data.frame(PCs[,1:no.significant.PC])
     ap1 <- apcluster(negDistMat(r=5),subPCs,q=0.001)
     #ap2 <- aggExCluster(x=ap1)
-    cluster=rep(2,dim(subPCs)[1])
-    cluster[ap1[[2]][[1]]]=1
+    cluster=rep(0,dim(subPCs)[1])
+    no.cluster <- length(ap1)
+    for (i in 1:no.cluster){
+      cluster[ap1@clusters[[i]]] <- i
+    }
   }else if (method == "hclust"){
     dis=dist(PCs)
     hc=hclust(dis, method = "complete")

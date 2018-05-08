@@ -6,8 +6,20 @@
 #'
 #' @return \code{NULL}
 #'
+#' @include clustering.R
+#'
 process.each.node <- function(node,work.dir){
   start.time <- Sys.time()
+
+  label <- NULL
+  raw.data <- NULL
+  threshold <- NULL
+  min.fst <- NULL
+  method <- NULL
+  min.in.group <- NULL
+  datatype <- NULL
+  nonlinear <- NULL
+  result.dir <- NULL
 
   cat(paste0("Node ",node,": Start the process\n"))
 

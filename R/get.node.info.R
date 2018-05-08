@@ -30,13 +30,18 @@
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
-#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 #'
 #' #Here, to obtain the information of specified node, for example, node 3
 #' node.info <- get.node.info(my.cluster,3)
 #' ls(node.info)
 
 get.node.info <- function(cluster.obj,node){
+  PCs <- NULL
+  eigen.fit <- NULL
+  index <- NULL
+  label <- NULL
+
   if (is.null(cluster.obj$output.dir)){
     cat(paste0("Incorrect parameter, please use the object returned from the function ipcaps as an input\n"))
     return(NULL)

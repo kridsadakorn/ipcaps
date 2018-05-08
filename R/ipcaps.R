@@ -81,8 +81,9 @@
 #'
 #' @export
 #'
-#' @import Rmixmod
-#' @import apcluster
+#' @include preprocess.R
+#' @include postprocess.R
+#' @include process.each.node.R
 #'
 #' @md
 #'
@@ -140,7 +141,7 @@
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
-#' my.cluster1 <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#' my.cluster1 <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 #'
 #' table(my.cluster1$cluster$label,my.cluster1$cluster$group)
 #'
@@ -151,7 +152,7 @@
 #'                          package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
-#' my.cluster2 <- ipcaps(files=c(text.file),label.file=LABEL.file,lab.col=2,out=getwd())
+#' my.cluster2 <- ipcaps(files=c(text.file),label.file=LABEL.file,lab.col=2,out=tempdir())
 #' table(my.cluster2$cluster$label,my.cluster2$cluster$group)
 #'
 #' # Use an R Data file as input
@@ -159,7 +160,7 @@
 #'
 #' rdata.file <- system.file("data","simSNP.RData",package="IPCAPS")
 #'
-#' my.cluster3 <- ipcaps(rdata=rdata.file,out=getwd())
+#' my.cluster3 <- ipcaps(rdata=rdata.file,out=tempdir())
 #' table(my.cluster3$cluster$label,my.cluster3$cluster$group)
 
 ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
@@ -168,7 +169,7 @@ ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
                     cov.col.last = NA, threshold = 0.18, min.fst = 0.0008,
                     min.in.group = 20, no.plot = FALSE){
 
-  label.fname = label.file
+  filename.label = label.file
   label.column = lab.col
   result.dir = out
   rerun = FALSE
@@ -182,6 +183,7 @@ ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
   regression.col.last = cov.col.last
   file.list = files
   max.thread = 1
+  cate.list = NULL
 
   start.time <- Sys.time()
 
@@ -199,7 +201,7 @@ ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
     cat(usage)
     quit()
   }
-  if ((length(label.fname)==0 || is.na(file.list)) && (length(rdata.infile)==0) &&
+  if ((length(filename.label)==0 || is.na(file.list)) && (length(rdata.infile)==0) &&
       (length(bed.infile)==0) && is.na(cate.list)){
     cat(usage)
     quit()
@@ -207,8 +209,8 @@ ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
 
   cat(paste0("Running ... IPCAPS \n\toutput: ",result.dir," \n"))
 
-  if (length(label.fname)>0){
-    cat(paste0("\tlabel file: ",label.fname,"\n"))
+  if (length(filename.label)>0){
+    cat(paste0("\tlabel file: ",filename.label,"\n"))
   }
 
   if (length(label.column)>0){
@@ -331,23 +333,10 @@ ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
   }
 
 
-  # read in the R functions and libraries, Don't change anything here
-  # require(Matrix,quietly=TRUE)
-  # require(expm,quietly=TRUE)
-  # require(e1071,quietly=TRUE)
-  # require(fpc)
-  # require(Rmixmod,quietly=TRUE)
-  # require(LPCM)
-  # require(apcluster)
-  # require(rARPACK)
-  # require(igraph)
-  #requireNamespace()
-
-
   #preprocessing step
   cat(paste0("In preprocessing step\n"))
 
-  result.dir=preprocess(files=file.list, label=label.fname, lab.col=label.column,
+  result.dir=preprocess(files=file.list, label.file=filename.label, lab.col=label.column,
                         rdata.infile=rdata.infile, bed.infile=bed.infile, cate.list=cate.list,
                         result.dir=result.dir, threshold=threshold, min.fst=min.fst,
                         reanalysis=rerun, method=method, min.in.group=min.in.group,datatype=datatype,

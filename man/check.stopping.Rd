@@ -8,9 +8,8 @@ criterion.}
 check.stopping(eigen.value, threshold)
 }
 \arguments{
-\item{eigen.value}{A vector of Eigenvalues return from \code{\link{svd}}
-($d), \code{\link{rARPACK::svds}} ($d),  \code{\link{eigen}}
-($values) or \code{\link{rARPACK::eigs}} ($values).}
+\item{eigen.value}{A vector of Eigenvalues return from \code{svd} ($d),
+\code{rARPACK::svds} ($d),  \code{eigen} ($values) or \code{rARPACK::eigs} ($values).}
 
 \item{threshold}{A threshold or a cutoff to stop the IPCAPS process. Also see
 \code{\link{ipcaps}} (the parameter \code{threshold}).}

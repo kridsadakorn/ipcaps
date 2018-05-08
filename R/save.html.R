@@ -15,6 +15,8 @@
 #'
 #' @export
 #'
+#' @include output.template.R
+#'
 #' @seealso \code{\link{save.plots}},
 #' \code{\link{save.plots.cluster.html}},
 #' \code{\link{save.eigenplots.html}},
@@ -28,12 +30,20 @@
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
-#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 #'
 #' #Here, to generate HTML file
 #' save.html(my.cluster$output.dir)
 
 save.html <- function(output.dir){
+
+  tree <- NULL
+  index <- NULL
+  eigen.fit <- NULL
+  min.in.group <- NULL
+  leaf.node <- NULL
+  threshold <- NULL
+
   load(file.path(output.dir,"RData","leafnode.RData"))
   load(file.path(output.dir,"RData","condition.RData"))
   load(file.path(output.dir,"RData","tree.RData"))

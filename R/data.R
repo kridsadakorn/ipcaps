@@ -55,7 +55,7 @@
 #' A dataset contains a numeric matrix of 1,004 rows and 10 columns of top 10
 #' PCs calculated from the dataset \code{raw.data}. The PCs were calculated
 #' using linear principal component analysis (PCA), see more datails at
-#' \code{\link{KRIS::cal.pc.linear}}
+#' \code{KRIS::cal.pc.linear}
 #'
 #' @name PC
 #' @docType data

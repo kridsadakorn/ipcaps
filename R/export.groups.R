@@ -24,6 +24,8 @@
 #'
 #' @export
 #'
+#' @import utils
+#'
 #' @examples
 #'
 #' # Importantly, bed file, bim file, and fam file are required
@@ -32,7 +34,7 @@
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
-#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 #'
 #' #Here, to export the IPCAPS result to a text file
 #' exported.data <- export.groups(my.cluster$output.dir)
@@ -40,6 +42,10 @@
 #' head(exported.data)
 
 export.groups <- function(result.dir){
+  leaf.node <- NULL
+  index <- NULL
+  label <- NULL
+
   load(file.path(result.dir,"RData","leafnode.RData"))
   export.data = NULL
   for (i in 1:length(leaf.node)){

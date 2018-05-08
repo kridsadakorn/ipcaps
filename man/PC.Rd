@@ -13,7 +13,7 @@ data(IPCAPS_example)
 A dataset contains a numeric matrix of 1,004 rows and 10 columns of top 10
 PCs calculated from the dataset \code{raw.data}. The PCs were calculated
 using linear principal component analysis (PCA), see more datails at
-\code{\link{KRIS::cal.pc.linear}}
+\code{KRIS::cal.pc.linear}
 }
 \seealso{
 \code{\link{raw.data}} and \code{\link{label}}

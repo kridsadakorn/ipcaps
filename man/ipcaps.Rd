@@ -118,7 +118,7 @@ library(IPCAPS)
 BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 
-my.cluster1 <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+my.cluster1 <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 
 table(my.cluster1$cluster$label,my.cluster1$cluster$group)
 
@@ -129,7 +129,7 @@ text.file <- system.file("extdata","simSNP_data_numMark_rowVar_colInd.txt",
                          package="IPCAPS")
 LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 
-my.cluster2 <- ipcaps(files=c(text.file),label.file=LABEL.file,lab.col=2,out=getwd())
+my.cluster2 <- ipcaps(files=c(text.file),label.file=LABEL.file,lab.col=2,out=tempdir())
 table(my.cluster2$cluster$label,my.cluster2$cluster$group)
 
 # Use an R Data file as input
@@ -137,7 +137,7 @@ table(my.cluster2$cluster$label,my.cluster2$cluster$group)
 
 rdata.file <- system.file("data","simSNP.RData",package="IPCAPS")
 
-my.cluster3 <- ipcaps(rdata=rdata.file,out=getwd())
+my.cluster3 <- ipcaps(rdata=rdata.file,out=tempdir())
 table(my.cluster3$cluster$label,my.cluster3$cluster$group)
 }
 \references{

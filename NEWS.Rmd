@@ -12,6 +12,28 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# IPCAPS 1.1.1.0
+
+## Added unit testing
+
+* testthat/test_clusteringmode.R
+
+## Changes
+
+* moved the nested functions in pasre.categorical.data and preprocess to parallelization.R
+* add roxygen2 code to pasre.categorical.data, replace.missing, do.glm
+
+## Updates
+
+* In roxygen part, changed from getwd() to tempdir()
+* fixed errors according to check as cran
+
+## Fixed functions
+
+* preprocess(): changed filename.label to label.file
+
+---
+
 # IPCAPS 1.1.0.0
 
 ## Updated functions

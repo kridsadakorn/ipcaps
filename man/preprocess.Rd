@@ -4,7 +4,7 @@
 \alias{preprocess}
 \title{(Internal function) Perform the pre-processing step of IPCAPS}
 \usage{
-preprocess(files, label.fname, lab.col, rdata.infile, bed.infile, cate.list,
+preprocess(files, label.file, lab.col, rdata.infile, bed.infile, cate.list,
   result.dir, threshold, min.fst, max.thread = NA, reanalysis = FALSE,
   method = "mix", min.in.group = 20, datatype = "snp",
   nonlinear = FALSE, missing.char = NA, regression.file = NA,
@@ -18,7 +18,7 @@ separated by a space or a tab. A big text file should be divided into smaller
 files to load faster. For instance, to input 3 files, use as: files=c(
 'input1.txt', 'input2.txt', 'input3.txt').}
 
-\item{label.fname}{An additional useful information (called "labels" in
+\item{label.file}{An additional useful information (called "labels" in
 IPCAPS) related subject, for example, geographic location or disease
 phenotype. These labels (one at a time) are used in displaying the clustering
 outcome of IPCAPS. A label file must contain at least one column. However,
@@ -93,10 +93,6 @@ PNG.}
 \item{no.plot}{No plot is generated if this option is TRUE. This option is
 useful when the system does not support X Windows in the unix based system.
 Default = FALSE.}
-
-\item{out}{To set an absolute path for IPCAPS output. If the specified output
-directory already exists, result files are saved in sub-directories
-cluster_out, cluster_out1, cluster_out2, etc.}
 }
 \value{
 A data frame of input data.

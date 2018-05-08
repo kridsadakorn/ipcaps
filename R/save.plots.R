@@ -18,6 +18,14 @@
 #'
 #' @export
 #'
+#' @import graphics
+#' @import grDevices
+#'
+#' @include parallelization.R
+#' @include save.plots.cluster.html.R
+#' @include save.plots.label.html.R
+#' @include save.eigenplots.html.R
+#'
 #' @seealso \code{\link{save.html}},
 #' \code{\link{save.plots.cluster.html}},
 #' \code{\link{save.eigenplots.html}},
@@ -31,12 +39,21 @@
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
-#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=getwd())
+#' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 #'
 #' #Here, to generate all plots and HTML files
 #' save.plots.label.html(my.cluster$output.dir)
 
 save.plots <- function(output.dir){
+
+  plot.as.pdf <- NULL
+  tree <- NULL
+  leaf.node <- NULL
+  threshold <- NULL
+  index <- NULL
+  eigen.fit <- NULL
+  PCs <- NULL
+  eigen.value <- NULL
 
   load(file.path(output.dir,"RData","leafnode.RData"))
   load(file.path(output.dir,"RData","tree.RData"))
@@ -45,10 +62,10 @@ save.plots <- function(output.dir){
   global.label = label
   node.list = sort(tree$node)
 
-  map_color = c("red",rgb(0,68,27,max=255),"blue",rgb(231,41,138,max=255),"darkorange","black")
-  map_color = c(map_color,rgb(102,37,6,max=255),rgb(63,0,125,max=255),"green")
-  map_color = c(map_color,"cyan",rgb(250,159,181,max=255),"yellow","darkgrey")
-  map_color = c(map_color,rgb(116,196,118,max=255))
+  map_color = c("red",rgb(0,68,27,maxColorValue=255),"blue",rgb(231,41,138,maxColorValue=255),"darkorange","black")
+  map_color = c(map_color,rgb(102,37,6,maxColorValue=255),rgb(63,0,125,maxColorValue=255),"green")
+  map_color = c(map_color,"cyan",rgb(250,159,181,maxColorValue=255),"yellow","darkgrey")
+  map_color = c(map_color,rgb(116,196,118,maxColorValue=255))
 
   map_pch = c(1,0,2:18,35:38,60:64,94,126)
   map_pch = c(map_pch,33:34,42,45,47,40,91,123,41,92,93,125)

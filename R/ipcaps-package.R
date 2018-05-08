@@ -24,9 +24,9 @@
 #'
 #' Moreover, here is the list of example datasets in the R package \pkg{IPCAPS}:
 #' \itemize{
-#' \item \code{\link{sim5pop}}
-#' \item \code{\link{pop_labels}}
-#' \item \code{\link{PCs}}
+#' \item \code{\link{raw.data}}
+#' \item \code{\link{label}}
+#' \item \code{\link{PC}}
 #' }
 #' @keywords internal
 #' @references

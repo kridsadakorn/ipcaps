@@ -16,8 +16,13 @@
 #' \item \code{row.number} represents row numbers of orginal input data.
 #' }
 #'
+#' @include export.groups.R
+#' @include save.plots.R
+#' @include save.html.R
 #'
 postprocess <- function( result.dir, reanalysis=FALSE){
+
+  no.plot <- NULL
 
   file.name = file.path(result.dir,"RData","leafnode.RData")
   load(file=file.name)

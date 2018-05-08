@@ -8,9 +8,8 @@ EigenFit values, internally used for parallelization}
 \method{diff}{eigen.fit}(eigen.value)
 }
 \arguments{
-\item{eigen.value}{A vector of Eigenvalues return from \code{\link{svd}}
-($d), \code{\link{rARPACK::svds}} ($d),  \code{\link{eigen}}
-($values) or \code{\link{rARPACK::eigs}} ($values).}
+\item{eigen.value}{A vector of Eigenvalues return from \code{svd} ($d),
+\code{rARPACK::svds} ($d), \code{eigen} ($values) or \code{rARPACK::eigs} ($values).}
 }
 \value{
 A vector of different values from a vector of EigenFit values

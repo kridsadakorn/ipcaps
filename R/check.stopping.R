@@ -2,9 +2,8 @@
 #' (Internal function) Check whether the IPCAPS process meets the stopping
 #' criterion.
 #'
-#' @param eigen.value A vector of Eigenvalues return from \code{\link{svd}}
-#' ($d), \code{\link{rARPACK::svds}} ($d),  \code{\link{eigen}}
-#' ($values) or \code{\link{rARPACK::eigs}} ($values).
+#' @param eigen.value A vector of Eigenvalues return from \code{svd} ($d),
+#' \code{rARPACK::svds} ($d),  \code{eigen} ($values) or \code{rARPACK::eigs} ($values).
 #' @param threshold A threshold or a cutoff to stop the IPCAPS process. Also see
 #' \code{\link{ipcaps}} (the parameter \code{threshold}).
 #'
@@ -19,6 +18,8 @@
 #' \item \code{$no.significant.PC} is an estimated number of sinificant
 #' principal components (PC).
 #' }
+#'
+#' @include parallelization.R
 #'
 #' @examples
 #'  X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
