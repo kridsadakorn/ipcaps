@@ -1,7 +1,7 @@
 ---
 title: "README"
 author: "Kridsadakorn Chaichoompu"
-date: "27/04/2018"
+date: "05/06/2018"
 output:
   pdf_document: default
   html_document:
@@ -26,7 +26,7 @@ Gaussian mixture modeling of principal components and Clustering EM estimation
 as in Lebret et al. (2015). In each iteration, rough clusters and outliers are 
 also identified using our own method called RubikClust (R package ```KRIS```).
 
-The R package ```IPCAPS``` requires the package ```KRIS```.
+The R package ```IPCAPS``` requires ```KRIS```.
 
 Here is the list of functions in the R package ```IPCAPS```:
 

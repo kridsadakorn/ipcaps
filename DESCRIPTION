@@ -1,4 +1,5 @@
 Package: IPCAPS
+Type: Package
 Title: IPCAPS: Iterative Pruning to Capture Population Structure
 Version: 1.1.1
 Authors@R: c(person(given = "Kridsadakorn", family = "Chaichoompu", email = "kridsadakorn.chaichoompu@gmail.com", role = c("aut", "cre")), person(given = "Kristel", family = 'Van Steen', role = "aut"), person(given = "Fentaw", family = "Abegaz", role = "aut"), person(given = "Sissades", family = "Tongsima", role = "aut"), person(given = "Philip", family = "Shaw", role = "aut"), person(given = "Anavaj", family = "Sakuntabhai", role = "aut"), person(given = "Luisa", family = "Pereira", role = "aut"))

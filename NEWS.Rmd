@@ -1,7 +1,7 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "27/04/2018"
+date: "05/06/2018"
 output:
   pdf_document: default
   html_document:
@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# IPCAPS 1.1.1.0
+# IPCAPS 1.1.1
 
 ## Added unit testing
 
@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ---
 
-# IPCAPS 1.1.0.0
+# IPCAPS 1.1.0
 
 ## Updated functions
 
@@ -45,7 +45,7 @@ This change may affect clustering result.
 
 ---
 
-# IPCAPS 1.0.7.0
+# IPCAPS 1.0.7
 
 ## Added data
 
@@ -68,7 +68,7 @@ This change may affect clustering result.
 
 ---
 
-# IPCAPS 1.0.6.0
+# IPCAPS 1.0.6
 
 ## Fixed functions
 
@@ -81,7 +81,7 @@ Removed the old RD files and added roxygen script to create manual for these fun
 
 ---
 
-# IPCAPS 1.0.5.0
+# IPCAPS 1.0.5
 
 ## Fixed functions
 
@@ -134,7 +134,7 @@ Removed the old RD files and added roxygen script to create manual for these fun
 
 ---
 
-# IPCAPS 1.0.1.0
+# IPCAPS 1.0.1
 
 ## Fixed functions
 
