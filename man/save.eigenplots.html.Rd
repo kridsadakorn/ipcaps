@@ -21,7 +21,7 @@ by the online Google Organizational Chart library. Note that the Internet is
 required to view the HTML file.
 }
 \details{
-This function generates the file called 'tree_scree.html' in the
+After running, this function generates the file called 'tree_scree.html' in the
 same result directory. All plots are generated and saved as image files in
 the sub-directory 'images'.
 }

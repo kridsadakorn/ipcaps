@@ -73,7 +73,7 @@ useful when the system does not support X Windows in the unix based system.
 Default = FALSE.}
 }
 \value{
-The function returns the list object containing 2 internal objects;
+Returns the list object containing 2 internal objects;
 output.dir as class character and cluster as class data.frame. The object
 output.dir stores a result directory. The object cluster contains 4 columns,
 group, node, label, and row.number. The column group contains the assigned
@@ -100,7 +100,7 @@ iterative pruning Principal Component Analysis (ipPCA) algorithm
 iterative process using multiple splits based on multivariate Gaussian
 mixture modeling of principal components and Clustering EM estimation (Lebret
 et al., 2015). In each iteration, rough clusters and outliers are also
-identified using our own method called rubikclust.
+identified using our own method called rubikclust (R package \pkg{KRIS}).
 }
 \details{
 The computational time depends on the number of individuals.
@@ -111,8 +111,8 @@ a com-prehensive matrix.
 }
 \references{
 Bodenhofer, U., Palme, J., Melkonian, C., and Kothmeier, A. (2016). apcluster
-: Affinity Propagation Clustering. Available at: \url{https://cran.r-project.
-org/web/packages/apcluster/index.html} (Accessed March 7, 2017).
+: Affinity Propagation Clustering. Available at: \url{ https://CRAN.R-project.
+org/package=apcluster} (Accessed March 7, 2017).
 
 Intarapanich, A., Shaw, P. J., Assawamakin, A., Wangkumhang, P., Ngamphiw, C.
 , Chaichoompu, K., et al. (2009). Iterative pruning PCA improves resolution
@@ -148,6 +148,6 @@ ethz.ch/R-manual/R-devel/library/cluster/html/pam.object.html} (Accessed
 March 7, 2017).
 
 Wang, M. C. and D. (2016). MeanShift: Clustering via the Mean Shift
-Algorithm. Available at: \url{https://cran.r-project.org/web/packages/
-MeanShift/index.html} (Accessed March 7, 2017).
+Algorithm. Available at: \url{https://CRAN.R-project.org/package=MeanShift}
+(Accessed March 7, 2017).
 }

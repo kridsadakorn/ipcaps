@@ -26,7 +26,7 @@ to this node.
 }
 }
 \description{
-This function is used to obtain the information for specified
+Obtain the information for specified
 node from the output list of \code{\link{ipcaps}}.
 }
 \examples{

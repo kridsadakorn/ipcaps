@@ -10,6 +10,13 @@ output:
 
 
 
+# IPCAPS 1.1.3
+
+## Fixed Text
+
+* In DESCRIPTION
+* In README.Rmd
+
 # IPCAPS 1.1.2
 
 ## Fixed Bugs

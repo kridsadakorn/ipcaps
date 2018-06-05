@@ -1,7 +1,7 @@
 
 #' Export the IPCAPS result in to a text file
 #'
-#' @description This function is used to export clustering result of
+#' @description Export clustering result of
 #' \code{\link{ipcaps}} to text file called 'groups.txt'.
 #'
 #' @param result.dir A result directory as the \code{$output} object returned
@@ -17,7 +17,7 @@
 #' \item \code{row.number} represents row numbers of orginal input data.
 #' }
 #'
-#' @details This function exports the file called 'groups.txt' to the same result
+#' @details After running, this function exports the file called 'groups.txt' to the same result
 #' directory. If 'groups.txt' already exists in the result directory, the
 #' exported file is changed to 'groups1.txt', 'groups2.txt', 'groups3.txt', ...,
 #' accordingly.

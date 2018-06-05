@@ -12,7 +12,7 @@
 #'
 #' @return \code{NULL}
 #'
-#' @details This function generates the file called 'tree_scatter_label.html'
+#' @details After running, this function generates the file called 'tree_scatter_label.html'
 #' in the same result directory. All plots are generated and saved as image files
 #' in the sub-directory 'images'.
 #'

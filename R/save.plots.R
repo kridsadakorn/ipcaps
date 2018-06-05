@@ -11,7 +11,7 @@
 #'
 #' @return \code{NULL}
 #'
-#' @details This function generates all plots and saves as image files in the
+#' @details After running, this function generates all plots and saves as image files in the
 #' sub-directory 'images'. It calls \code{\link{save.plots.cluster.html}},
 #' \code{\link{save.eigenplots.html}}, and \code{\link{save.plots.label.html}}
 #' to generate all HTML files.

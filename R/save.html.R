@@ -10,7 +10,7 @@
 #'
 #' @return \code{NULL}
 #'
-#' @details This function generates the file called 'tree_text.html' in the
+#' @details After running, this function generates the file called 'tree_text.html' in the
 #' same result directory.
 #'
 #' @export

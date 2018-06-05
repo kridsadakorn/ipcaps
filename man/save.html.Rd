@@ -20,7 +20,7 @@ the online Google Organizational Chart library. Note that the Internet is
 required to view the HTML file.
 }
 \details{
-This function generates the file called 'tree_text.html' in the
+After running, this function generates the file called 'tree_text.html' in the
 same result directory.
 }
 \examples{

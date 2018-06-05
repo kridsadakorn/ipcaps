@@ -33,6 +33,6 @@ position, allele1, allele2, and Fst. The column 1-6 are SNP information from
 the bim file. The column Fst contains estimated Fst between group1 and group2.
 }
 \description{
-This function detects top discriminators that contribute to
+Detects top discriminators that contribute to
 group separation based on the fixation index (Fst).
 }

@@ -1,7 +1,7 @@
 
 #' Detecting top discriminators between two groups
 #'
-#' @description This function detects top discriminators that contribute to
+#' @description Detects top discriminators that contribute to
 #' group separation based on the fixation index (Fst).
 #'
 #' @param cluster.obj The object which is returned from \code{\link{ipcaps}}.

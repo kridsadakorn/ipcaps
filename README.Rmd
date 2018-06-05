@@ -66,7 +66,7 @@ Install the released version of ```IPCAPS``` from CRAN:
 install.packages("IPCAPS")
 ```
 
-## For developemenpers, problem sovling in checking the package as CRAN
+## For developemenpers: problem sovling in checking the package as CRAN
 
 ### Error of Roxygen2 in building RD files
 
@@ -82,6 +82,24 @@ Tools... > use devtools package functions if available_) or run
 
 When facing error for ```testthat```, try to update the package ```testthat``` and add 
 ```Suggests: testthat``` in _DESCRIPTION_ file.
+
+### Submit package to CRAN
+
+Check the submission using ```R CMD check --as-cran``` and a current version of 
+r-devel, as mandated by the CRAN Repository Policy. (You could do so using the 
+win-builder service at http://win-builder.r-project.org)
+
+## Resubmit new version to CRAN
+
+Check downstream dependencies with ```devtools::revdep_check()```
+
+### Error on checking DESCRIPTION meta-information in Linux
+
+Edit ~/.profile, ~/.bash_profile or ~/.bashrc, then add
+
+export LANG=en_US.UTF-8
+
+export LC_ALL=en_US.UTF-8
 
 ## CONTRIBUTOR CODE OF CONDUCT
 

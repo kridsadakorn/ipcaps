@@ -6,7 +6,7 @@
 \alias{IPCAPS-package}
 \title{IPCAPS : Iterative Pruning to CApture Population Structure}
 \description{
-IPCAPS is an unsupervised clustering algorithm based on iterative pruning to capture
+An unsupervised clustering algorithm based on iterative pruning is for capturing
 population structure. This version supports ordinal data which can be applied
 directly to SNP data to identify fine-level population structure and it is
 built on the iterative pruning Principal Component Analysis (ipPCA) algorithm
@@ -61,7 +61,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Kridsadakorn Chaichoompu \email{kridsadakorn.chaichoompu@gmail.com}
+\strong{Maintainer}: Kridsadakorn Chaichoompu \email{kridsadakorn@biostatgen.org}
 
 Authors:
 \itemize{

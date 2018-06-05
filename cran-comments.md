@@ -15,19 +15,24 @@
 
 0 errors | 0 warnings | 2 notes
 
-* checking CRAN incoming feasibility, Maintainer: Kridsadakorn Chaichoompu <kridsadakorn@biostatgen.org>, New submission
-* checking installed package size, installed size is 12.0Mb
+* checking installed package size ... installed size is 44.4Mb
+* checking CRAN incoming feasibility ... Maintainer: Kridsadakorn Chaichoompu <kridsadakorn@biostatgen.org>, New submission
 
 ## R CMD check results for win-builder
 
-0 errors | 0 warnings | 1 notes
+0 errors | 0 warnings | 2 notes
 
 ### NOTES:
-Possibly mis-spelled words in DESCRIPTION:
 
-* Fst (6:243)
-* GWAS (6:370)
-* nucleotide (6:102)
-* polymorphisms (6:113)
-  
-In fact, these words do exist in biology and bioinformatic areas.
+* checking installed package size ... installed size is  9.0Mb
+* Possibly mis-spelled words in DESCRIPTION:
+
+    * IPCAPS (3:8, 6:14, 6:362)
+    * Intarapanich (6:331)
+    * Lebret (6:528)
+    * RubikClust (6:645)
+    * al (6:347, 6:538)
+    * et (6:344, 6:535)
+    * ipPCA (6:313)
+    * In fact, these words do exist in biology and bioinformatic areas, and some words 
+are names.

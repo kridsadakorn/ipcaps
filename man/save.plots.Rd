@@ -20,7 +20,7 @@ by the online Google Organizational Chart library. Note that the Internet is
 required to view the HTML files.
 }
 \details{
-This function generates all plots and saves as image files in the
+After running, this function generates all plots and saves as image files in the
 sub-directory 'images'. It calls \code{\link{save.plots.cluster.html}},
 \code{\link{save.eigenplots.html}}, and \code{\link{save.plots.label.html}}
 to generate all HTML files.
