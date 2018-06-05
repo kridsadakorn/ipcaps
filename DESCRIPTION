@@ -1,7 +1,7 @@
 Package: IPCAPS
 Type: Package
 Title: IPCAPS: Iterative Pruning to Capture Population Structure
-Version: 1.1.1
+Version: 1.1.2
 Authors@R: c(person(given = "Kridsadakorn", family = "Chaichoompu", email = "kridsadakorn.chaichoompu@gmail.com", role = c("aut", "cre")), person(given = "Kristel", family = 'Van Steen', role = "aut"), person(given = "Fentaw", family = "Abegaz", role = "aut"), person(given = "Sissades", family = "Tongsima", role = "aut"), person(given = "Philip", family = "Shaw", role = "aut"), person(given = "Anavaj", family = "Sakuntabhai", role = "aut"), person(given = "Luisa", family = "Pereira", role = "aut"))
 Description: IPCAPS is an unsupervised clustering algorithm based on iterative pruning to capture population structure. This version supports ordinal data which can be applied directly to SNP data to identify fine-level population structure and it is built on the iterative pruning Principal Component Analysis (ipPCA) algorithm (Intarapanich et al. 2009). The IPCAPS involves an iterative process using multiple splits based on multivariate Gaussian mixture modeling of principal components and Clustering EM estimation as in Lebret et al. (2015). In each iteration, rough clusters and outliers are also identified using our own method called RubikClust.
 Depends: R (>= 3.2.4.0)

@@ -12,6 +12,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# IPCAPS 1.1.2
+
+## Updates
+
+* Changed to use KRIS:plot3views to replace the codes for generating plots
+
+
 # IPCAPS 1.1.1
 
 ## Added unit testing
