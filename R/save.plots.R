@@ -18,7 +18,8 @@
 #'
 #' @export
 #'
-#' @import KRIS
+#' @import graphics
+#' @import grDevices
 #'
 #' @include parallelization.R
 #' @include save.plots.cluster.html.R

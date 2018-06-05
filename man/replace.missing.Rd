@@ -21,12 +21,3 @@ A vector of data with replaced character for miss values
 (Internal function) Replace missing values by specified values, internally
 used for parallelization
 }
-\examples{
-X <- runif(20, min = 0, max = 3)
-X[c(2,4,8,13,17)] <- NA
-missing <- NA
-replace.char <- rep(0,20)
-res <- replace.missing(X, missing.char, replace.char)
-print(X)
-print(res)
-}

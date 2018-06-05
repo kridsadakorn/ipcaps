@@ -20,11 +20,7 @@
 #' }
 #'
 #' @include parallelization.R
-#'
-#' @examples
-#'  X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
-#'  print(check.stopping(X,0.1))
-#'
+
 check.stopping <- function(eigen.value, threshold){
 
   eigen.fit.vec = cal.eigen.fit(eigen.value)

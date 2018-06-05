@@ -132,8 +132,6 @@
 #'
 #' @examples
 #'
-#' library(IPCAPS)
-#'
 #' #Use the BED format as input
 #' #Importantly, bed file, bim file, and fam file are required
 #' #Use the example files embedded in the package

@@ -24,10 +24,6 @@ belongs.
 (Internal function) Select a clustering method to be used for the IPCAPS
 process.
 }
-\examples{
-#mydir = tempdir()
-#clustering.mode(node = 1, work.dir = mydir, method = 'mixmod')
-}
 \seealso{
 \code{\link{ipcaps}}
 }

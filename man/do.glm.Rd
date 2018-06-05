@@ -22,20 +22,3 @@ A vector of residuals computed from regression model
 (Internal function) Perform regression models, internally used for
 parallelization
 }
-\examples{
-PC <- matrix(runif(300, min = 0, max = 3),ncol = 3)
-X <- sample(c(0,1,2), size = 100, replace = T)
-
-method <- "linear"
-res <- do.glm(X,PC,method)
-print(res)
-
-method <- "poisson"
-res <- do.glm(X,PC,method)
-print(res)
-
-method <- "negative.binomial"
-res <- do.glm(X,PC,method)
-print(res)
-
-}

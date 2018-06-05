@@ -19,8 +19,3 @@ The different number of \code{x} and \code{y}.
 (Internal function) Check the different value of X and Y, internally used for
 parallelization
 }
-\examples{
-print(diff.xy(2.4,6.7))
-print(diff.xy(8.23,3.5))
-print(diff.xy(4.3,4.3))
-}

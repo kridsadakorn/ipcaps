@@ -31,8 +31,3 @@ principal components (PC).
 (Internal function) Check whether the IPCAPS process meets the stopping
 criterion.
 }
-\examples{
- X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
- print(check.stopping(X,0.1))
-
-}

@@ -20,10 +20,7 @@
 #' @import KRIS
 #'
 #' @seealso \code{\link{ipcaps}}
-#'
-#' @examples
-#' #mydir = tempdir()
-#' #clustering.mode(node = 1, work.dir = mydir, method = 'mixmod')
+
 clustering.mode <- function(node,work.dir,method){
   start.time = Sys.time()
 

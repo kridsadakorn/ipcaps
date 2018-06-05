@@ -19,9 +19,3 @@ A vector of all possible values for EigenFit.
 (Internal function) Calculae a vector of EigenFit values, internally used for
 parallelization
 }
-\examples{
- X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
- res <- cal.eigen.fit(X)
- print(res)
-
-}

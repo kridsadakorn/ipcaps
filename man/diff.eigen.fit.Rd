@@ -18,7 +18,3 @@ A vector of different values from a vector of EigenFit values
 (Internal function) Calculate a vector of different values from a vector of
 EigenFit values, internally used for parallelization
 }
-\examples{
- X <- sort(runif(10, min = 0, max = 3), decreasing = TRUE)
- print(diff.eigen.fit(X))
-}
