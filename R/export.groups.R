@@ -31,6 +31,7 @@
 #' # Importantly, bed file, bim file, and fam file are required
 #' # Use the example files embedded in the package
 #'
+#' \donttest{
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
@@ -40,6 +41,7 @@
 #' exported.data <- export.groups(my.cluster$output.dir)
 #' print(dim(exported.data))
 #' head(exported.data)
+#' }
 
 export.groups <- function(result.dir){
   leaf.node <- NULL

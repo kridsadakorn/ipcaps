@@ -27,6 +27,7 @@
 #' # Importantly, bed file, bim file, and fam file are required
 #' # Use the example files embedded in the package
 #'
+#' \donttest{
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
@@ -35,6 +36,7 @@
 #' #Here, to obtain the information of specified node, for example, node 3
 #' node.info <- get.node.info(my.cluster,3)
 #' ls(node.info)
+#' }
 
 get.node.info <- function(cluster.obj,node){
   PCs <- NULL

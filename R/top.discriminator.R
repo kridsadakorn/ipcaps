@@ -26,6 +26,7 @@
 #'
 #' @examples
 #'
+#' \donttest{
 #' # Importantly, bed file, bim file, and fam file are required
 #' # Use the example files embedded in the package
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
@@ -65,6 +66,7 @@
 #' # chr SNP centimorgans position allele1 allele2 Fst
 #' #V5452 1 marker5452 0 54520000 A T 0.11337260
 #' #V2348 1 marker2348 0 23480000 A T 0.11194490
+#' }
 
 top.discriminator <- function(cluster.obj,group1,group2,bim.file,use.node.number=FALSE,num.top=100){
 

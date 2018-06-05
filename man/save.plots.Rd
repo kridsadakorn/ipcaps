@@ -30,6 +30,7 @@ to generate all HTML files.
 # Importantly, bed file, bim file, and fam file are required
 # Use the example files embedded in the package
 
+\donttest{
 BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 
@@ -37,6 +38,7 @@ my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 
 #Here, to generate all plots and HTML files
 save.plots.label.html(my.cluster$output.dir)
+}
 }
 \seealso{
 \code{\link{save.html}},

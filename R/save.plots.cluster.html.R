@@ -30,6 +30,7 @@
 #' # Importantly, bed file, bim file, and fam file are required
 #' # Use the example files embedded in the package
 #'
+#' \donttest{
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
@@ -37,6 +38,7 @@
 #'
 #' #Here, to generate HTML file
 #' save.plots.cluster.html(my.cluster$output.dir)
+#' }
 
 save.plots.cluster.html <- function(output.dir){
 

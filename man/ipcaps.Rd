@@ -113,6 +113,7 @@ a com-prehensive matrix.
 #Importantly, bed file, bim file, and fam file are required
 #Use the example files embedded in the package
 
+\donttest{
 BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 
@@ -137,6 +138,7 @@ rdata.file <- system.file("data","simSNP.RData",package="IPCAPS")
 
 my.cluster3 <- ipcaps(rdata=rdata.file,out=tempdir())
 table(my.cluster3$cluster$label,my.cluster3$cluster$group)
+}
 }
 \references{
 Bodenhofer, U., Palme, J., Melkonian, C., and Kothmeier, A. (2016). apcluster

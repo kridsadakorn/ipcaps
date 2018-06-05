@@ -8,9 +8,7 @@ output:
   pdf_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 # R Package IPCAPS
 
@@ -61,7 +59,8 @@ Lastly, here is the list of example data files included in the directory ```extd
 
 Install the released version of ```IPCAPS``` from CRAN:
 
-```{r, eval = FALSE}
+
+```r
 install.packages("IPCAPS")
 ```
 

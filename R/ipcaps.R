@@ -136,6 +136,7 @@
 #' #Importantly, bed file, bim file, and fam file are required
 #' #Use the example files embedded in the package
 #'
+#' \donttest{
 #' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
 #' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
 #'
@@ -160,6 +161,7 @@
 #'
 #' my.cluster3 <- ipcaps(rdata=rdata.file,out=tempdir())
 #' table(my.cluster3$cluster$label,my.cluster3$cluster$group)
+#' }
 
 ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
                     lab.col = 1, out, plot.as.pdf = FALSE, method = 'mix',
