@@ -191,7 +191,7 @@ preprocess <- function( files, label.file, lab.col, rdata.infile, bed.infile, ca
     label = unlist(label)
     label = as.factor(label)
 
-  }else{
+  }else if (!is.na(cate.list)){
     #load CATegorical files
     raw.data = pasre.categorical.data(cate.list)
     index = seq(1,length(raw.data[,1]))
@@ -202,6 +202,11 @@ preprocess <- function( files, label.file, lab.col, rdata.infile, bed.infile, ca
     label = unlist(label)
     label = as.factor(label)
 
+  }else{
+    #No proper input file
+    cat(paste0("Not found proper input files, please check the examples of "))
+    cat(paste0("ipcaps() in order to use the function properly.\n"))
+    return(NULL)
   }
 
 

@@ -26,11 +26,11 @@
 #'
 #' @examples
 #'
-#' \donttest{
+#' \donttest
 #' # Importantly, bed file, bim file, and fam file are required
 #' # Use the example files embedded in the package
-#' BED.file <- system.file("extdata","simSNP.bed",package="IPCAPS")
-#' LABEL.file <- system.file("extdata","simSNP_individuals.txt",package="IPCAPS")
+#' BED.file <- system.file("extdata","IPCAPS_example.bed",package="IPCAPS")
+#' LABEL.file <- system.file("extdata","IPCAPS_example_individuals.txt",package="IPCAPS")
 #' my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 #' table(my.cluster$cluster$label,my.cluster$cluster$group)
 #' # 1 2 3 4 5 6
@@ -42,7 +42,7 @@
 #' #Identify top discriminators between groups, for example, group 4 and group 5
 #' top.snp <-top.discriminator(my.cluster,4,5)
 #' #or, specify the bim file
-#' #top.snp <-top.discriminator(my.cluster,4,5,bim.file="simSNP.bim")
+#' #top.snp <-top.discriminator(my.cluster,4,5,bim.file="IPCAPS_example.bim")
 #' head(top.snp)
 #' # chr SNP centimorgans position allele1 allele2 Fst
 #' #V5452 1 marker5452 0 54520000 A T 0.11337260

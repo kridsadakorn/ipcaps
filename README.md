@@ -54,6 +54,7 @@ Lastly, here is the list of example data files included in the directory ```extd
 * ```IPCAPS_example_PC10.txt```
 * ```IPCAPS_example_individuals.txt```
 * ```IPCAPS_example_rowVar_colInd.txt```
+* ```IPCAPS_example.RData```
 
 ## Installation
 

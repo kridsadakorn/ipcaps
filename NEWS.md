@@ -17,6 +17,14 @@ output:
 * Removed all examples for roxygen2 for all internal functions
 * Removed all "library(IPCAPS)" in unit tests and examples
 
+## Changes
+
+* All example files were changed from ```simSNP*``` to ```IPCAPS_example*``` 
+
+## Added example file
+
+* inst/extdata/IPCAPS_example.RData to used in the example of ipcaps()
+
 
 # IPCAPS 1.1.1
 

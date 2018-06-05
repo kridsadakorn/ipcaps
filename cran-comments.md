@@ -9,7 +9,7 @@
 
 ### NOTES:
 
-* checking installed package size ... installed size is  8.3Mb
+* checking installed package size ... installed size is  9.1Mb
 
 ## R CMD check results for Scientific Linux
 
