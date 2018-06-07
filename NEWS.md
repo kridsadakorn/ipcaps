@@ -1,13 +1,21 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "05/06/2018"
+date: "07/06/2018"
 output:
   html_document:
     keep_md: yes
   pdf_document: default
 ---
 
+
+
+# IPCAPS 1.1.4
+
+## Updates
+
+* Added references in the DESCRIPTION file
+* Added single quotes for Software's names in the DESCRRIPTION file
 
 
 # IPCAPS 1.1.3
