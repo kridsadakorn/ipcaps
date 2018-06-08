@@ -17,7 +17,10 @@
 #' \item \code{\link{export.groups}}
 #' \item \code{\link{get.node.info}}
 #' \item \code{\link{ipcaps}}
+#' \item \code{\link{save.eigenplots.html}}
 #' \item \code{\link{save.html}}
+#' \item \code{\link{save.plots.cluster.html}}
+#' \item \code{\link{save.plots.label.html}}
 #' \item \code{\link{save.plots}}
 #' \item \code{\link{top.discriminator}}
 #' }

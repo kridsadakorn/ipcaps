@@ -10,6 +10,13 @@ output:
 
 
 
+# IPCAPS 1.1.5
+
+## Updates
+
+* Added more details in roxygen part of ipcaps-package.R
+
+
 # IPCAPS 1.1.4
 
 ## Updates
