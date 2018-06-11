@@ -26,7 +26,7 @@
 #'
 #' @examples
 #'
-#' \donttest
+#' \donttest{
 #' # Importantly, bed file, bim file, and fam file are required
 #' # Use the example files embedded in the package
 #' BED.file <- system.file("extdata","IPCAPS_example.bed",package="IPCAPS")

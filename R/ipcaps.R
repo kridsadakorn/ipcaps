@@ -138,11 +138,10 @@
 #' #Importantly, bed file, bim file, and fam file are required
 #' #Use the example files embedded in the package
 #'
-#' \donttest
+#' \donttest{
 #' BED.file <- system.file("extdata", "IPCAPS_example.bed", package = "IPCAPS")
 #' LABEL.file <- system.file("extdata", "IPCAPS_example_individuals.txt",
 #'                           package = "IPCAPS")
-#'
 #' my.cluster1 <- ipcaps(bed = BED.file, label.file = LABEL.file, lab.col = 2,
 #' out = tempdir())
 #'
@@ -168,7 +167,7 @@
 #' my.cluster3 <- ipcaps(rdata = rdata.file, out = tempdir())
 #' table(my.cluster3$cluster$label, my.cluster3$cluster$group)
 #' }
-
+#'
 ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
                     lab.col = 1, out, plot.as.pdf = FALSE, method = 'mix',
                     missing = NA, covariate = NA, cov.col.first = NA,
