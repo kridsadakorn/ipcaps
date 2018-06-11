@@ -6,9 +6,9 @@
 #' built on the iterative pruning Principal Component Analysis (ipPCA) algorithm
 #' (Intarapanich et al., 2009; Limpiti et al., 2011). The IPCAPS involves an
 #' iterative process using multiple splits based on multivariate Gaussian
-#' mixture modeling of principal components and Clustering EM estimation as in
+#' mixture modeling of principal components and Clustering EM estimation as explained in
 #' Lebret et al. (2015). In each iteration, rough clusters and outliers are also
-#' identified using our own method called RubikClust (R package \pkg{KRIS}).
+#' identified using the function rubikclust() from the R package \pkg{KRIS}.
 #'
 #' The R package \pkg{IPCAPS} requires the package \pkg{KRIS}.
 #'

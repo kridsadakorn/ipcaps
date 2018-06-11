@@ -1,7 +1,7 @@
 ---
 title: "README"
 author: "Kridsadakorn Chaichoompu"
-date: "07/06/2018"
+date: "11/06/2018"
 output:
   html_document:
     keep_md: yes
@@ -24,7 +24,7 @@ structure and it is built on the iterative pruning Principal Component Analysis
 involves an iterative process using multiple splits based on multivariate 
 Gaussian mixture modeling of principal components and Clustering EM estimation 
 as in Lebret et al. (2015). In each iteration, rough clusters and outliers are 
-also identified using our own method called RubikClust (R package ```KRIS```).
+also identified using the function ```rubikclust()``` from the R package ```KRIS```.
 
 The R package ```IPCAPS``` requires ```stats```, ```utils```, ```graphics```, 
 ```grDevices```, ```MASS```, ```Matrix```, ```expm```, ```KRIS```, ```fpc```, 

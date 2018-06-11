@@ -1,7 +1,7 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "07/06/2018"
+date: "11/06/2018"
 output:
   html_document:
     keep_md: yes
@@ -15,6 +15,8 @@ output:
 ## Updates
 
 * Added more details in roxygen part of ipcaps-package.R
+* Fixed text according to comments from CRAN
+* Updated README.md according to the changes above
 
 
 # IPCAPS 1.1.4
