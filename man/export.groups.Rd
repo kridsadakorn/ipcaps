@@ -2,7 +2,7 @@
 % Please edit documentation in R/export.groups.R
 \name{export.groups}
 \alias{export.groups}
-\title{Export the IPCAPS result in to a text file}
+\title{Export the IPCAPS result to a text file}
 \usage{
 export.groups(result.dir)
 }

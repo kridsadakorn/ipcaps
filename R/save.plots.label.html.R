@@ -1,5 +1,5 @@
 
-#' Generate HTML file for scratter plots highlighting data points by given labels
+#' Generate HTML file for scatter plots which data points are highlighted by given labels
 #'
 #' @description Generate HTML file called 'tree_scatter_label.html' from the
 #' result of \code{\link{ipcaps}}. This function is a part of workflow in

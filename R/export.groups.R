@@ -1,5 +1,5 @@
 
-#' Export the IPCAPS result in to a text file
+#' Export the IPCAPS result to a text file
 #'
 #' @description Export clustering result of
 #' \code{\link{ipcaps}} to text file called 'groups.txt'.

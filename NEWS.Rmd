@@ -1,16 +1,23 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "11/06/2018"
+date: "02/09/2018"
 output:
+  word_document: default
+  pdf_document: default
   html_document:
     keep_md: yes
-  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# IPCAPS 1.1.6
+
+## Updates
+
+* Corrected descripton of export.gorups
+
 
 # IPCAPS 1.1.5
 

@@ -1,5 +1,5 @@
 
-#' Generate HTML file for scratter plots highlighting data points by IPCAPS clusters
+#' Generate HTML file for scatter plots which all data points are highlighted by IPCAPS clusters
 #'
 #' @description Generate HTML file called 'tree_scatter_cluster.html' from the
 #' result of \code{\link{ipcaps}}. This function is a part of workflow in
