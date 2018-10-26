@@ -4,10 +4,11 @@
 \alias{ipcaps}
 \title{Perform unsupervised clustering to capture population structure based on iterative pruning}
 \usage{
-ipcaps(bed = NA, rdata = NA, files = NA, label.file = NA, lab.col = 1,
-  out, plot.as.pdf = FALSE, method = "mix", missing = NA,
-  covariate = NA, cov.col.first = NA, cov.col.last = NA,
-  threshold = 0.18, min.fst = 8e-04, min.in.group = 20, no.plot = FALSE)
+ipcaps(bed = NA, rdata = NA, files = NA, label.file = NA,
+  lab.col = 1, out, plot.as.pdf = FALSE, method = "mix",
+  missing = NA, covariate = NA, cov.col.first = NA,
+  cov.col.last = NA, threshold = 0.18, min.fst = 8e-04,
+  min.in.group = 20, no.plot = FALSE)
 }
 \arguments{
 \item{bed}{A PLINK binary format consists of 3 files; bed, bim, and fam. To

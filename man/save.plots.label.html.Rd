@@ -2,7 +2,7 @@
 % Please edit documentation in R/save.plots.label.html.R
 \name{save.plots.label.html}
 \alias{save.plots.label.html}
-\title{Generate HTML file for scratter plots highlighting data points by given labels}
+\title{Generate HTML file for scatter plots which data points are highlighted by given labels}
 \usage{
 save.plots.label.html(output.dir)
 }

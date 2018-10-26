@@ -1,19 +1,26 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "11/06/2018"
+date: "16/10/2018"
 output:
   pdf_document: default
   html_document:
     keep_md: yes
 ---
 
+# IPCAPS 1.1.7
+
+## Updates
+
+* Updated the functions to support re-analysis when the result files are moved to another directory; top.discriminator, ipcaps.
+* top.discriminator now accepts a percentile for filtering.
+
+
 # IPCAPS 1.1.6
 
 ## Updates
 
 * Corrected descripton of export.gorups, save.plots, save.plots.cluster.html, and save.plots.cluster.html
-
 
 # IPCAPS 1.1.5
 

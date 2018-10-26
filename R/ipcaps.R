@@ -404,8 +404,10 @@ ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
   cat(paste0("Total runtime is ",run.time," sec\n"))
   file.name = file.path(result.dir,"RData","runtime.RData")
   save(run.time,file=file.name, compress = 'bzip2')
-  ret <- list("output.dir"=result.dir,"cluster"=cluster.tab)
-  return(ret)
+  cluster.obj <- list("output.dir"=result.dir,"cluster"=cluster.tab)
+  file.name = file.path(result.dir,"RData","result.RData")
+  save(cluster.obj,file=file.name, compress = 'bzip2')
+  return(cluster.obj)
 }
 # Check the result files in your output directory
 # groups.txt contains the assigned groups of samples

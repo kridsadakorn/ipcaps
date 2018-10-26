@@ -2,7 +2,7 @@
 % Please edit documentation in R/save.plots.cluster.html.R
 \name{save.plots.cluster.html}
 \alias{save.plots.cluster.html}
-\title{Generate HTML file for scratter plots highlighting data points by IPCAPS clusters}
+\title{Generate HTML file for scatter plots which all data points are highlighted by IPCAPS clusters}
 \usage{
 save.plots.cluster.html(output.dir)
 }
