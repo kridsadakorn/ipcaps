@@ -3,15 +3,24 @@ title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
 date: "02/09/2018"
 output:
-  word_document: default
-  pdf_document: default
   html_document:
     keep_md: yes
+  word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# IPCAPS 1.1.7
+
+## Updates
+
+* Updated the functions to support re-analysis when the result files are moved to another directory; top.discriminator, ipcaps.
+* top.discriminator now accepts a percentile for filtering.
+
+
 # IPCAPS 1.1.6
 
 ## Updates

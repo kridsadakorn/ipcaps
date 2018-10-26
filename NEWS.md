@@ -1,12 +1,15 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "16/10/2018"
+date: "02/09/2018"
 output:
-  pdf_document: default
   html_document:
     keep_md: yes
+  word_document: default
+  pdf_document: default
 ---
+
+
 
 # IPCAPS 1.1.7
 
@@ -20,7 +23,8 @@ output:
 
 ## Updates
 
-* Corrected descripton of export.gorups, save.plots, save.plots.cluster.html, and save.plots.cluster.html
+* Corrected descripton of export.gorups
+
 
 # IPCAPS 1.1.5
 
