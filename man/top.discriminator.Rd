@@ -4,9 +4,18 @@
 \alias{top.discriminator}
 \title{Detecting top discriminators between two groups}
 \usage{
-top.discriminator(cluster.obj = NULL, group1, group2, bim.file,
-  use.node.number = FALSE, num.top = 100, percentile = 0.9,
-  use.percentile = FALSE, use.path = FALSE, result.path = NULL)
+top.discriminator(
+  cluster.obj = NULL,
+  group1,
+  group2,
+  bim.file,
+  use.node.number = FALSE,
+  num.top = 100,
+  percentile = 0.9,
+  use.percentile = FALSE,
+  use.path = FALSE,
+  result.path = NULL
+)
 }
 \arguments{
 \item{cluster.obj}{The object which is returned from \code{\link{ipcaps}}.
@@ -57,11 +66,10 @@ group separation based on the fixation index (Fst).
 }
 \examples{
 
-\donttest{
 # Importantly, bed file, bim file, and fam file are required
 # Use the example files embedded in the package
-BED.file <- system.file("extdata","IPCAPS_example.bed",package="IPCAPS")
-LABEL.file <- system.file("extdata","IPCAPS_example_individuals.txt",package="IPCAPS")
+BED.file <- system.file("extdata","ipcaps_example.bed",package="IPCAPS")
+LABEL.file <- system.file("extdata","ipcaps_example_individuals.txt.gz",package="IPCAPS")
 my.cluster <- ipcaps(bed=BED.file,label.file=LABEL.file,lab.col=2,out=tempdir())
 table(my.cluster$cluster$label,my.cluster$cluster$group)
 # 1 2 3 4 5 6
@@ -73,7 +81,7 @@ table(my.cluster$cluster$label,my.cluster$cluster$group)
 #Identify top discriminators between groups, for example, group 4 and group 5
 top.snp <-top.discriminator(my.cluster,4,5)
 #or, specify the bim file
-#top.snp <-top.discriminator(my.cluster,4,5,bim.file="IPCAPS_example.bim")
+#top.snp <-top.discriminator(my.cluster,4,5,bim.file="ipcaps_example.bim")
 head(top.snp)
 # chr SNP centimorgans position allele1 allele2 Fst
 #V5452 1 marker5452 0 54520000 A T 0.11337260
@@ -84,7 +92,7 @@ head(top.snp)
 #V8419 1 marker8419 0 84190000 A T 0.08293494
 
 #Alternatively, specify the previous result directory of IPCAPS and identify
-top discriminators between groups, for example, group 4 and group 5
+#top discriminators between groups, for example, group 4 and group 5
 previous.res.path <- my.cluster$output.dir
 top.snp <-top.discriminator(result.path = previous.res.path, use.path = TRUE,
 group1 = 4, group2 = 5)
@@ -93,7 +101,7 @@ head(top.snp)
 #Identify top discriminators between groups, for example, group 4 and group 5
 top.snp <-top.discriminator(my.cluster,4,5)
 #or, specify the bim file
-#top.snp <-top.discriminator(my.cluster,4,5,bim.file="IPCAPS_example.bim")
+#top.snp <-top.discriminator(my.cluster,4,5,bim.file="ipcaps_example.bim")
 dim(top.snp)
 head(top.snp)
 
@@ -109,5 +117,4 @@ head(top.snp2)
 # chr SNP centimorgans position allele1 allele2 Fst
 #V5452 1 marker5452 0 54520000 A T 0.11337260
 #V2348 1 marker2348 0 23480000 A T 0.11194490
-}
 }

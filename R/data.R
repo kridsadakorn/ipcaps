@@ -18,7 +18,7 @@
 #' @docType data
 #' @format A matrix with 3,000 columns and 1,004 rows
 #' @seealso \code{\link{label}} and \code{\link{PC}}
-#' @usage data(IPCAPS_example)
+#' @usage data(ipcaps_example)
 #' @keywords raw.data
 #' @md
 #' @references
@@ -41,7 +41,7 @@
 #' @docType data
 #' @format A vector with 1,004 elements.
 #' @seealso \code{\link{raw.data}} and \code{\link{PC}}
-#' @usage data(IPCAPS_example)
+#' @usage data(ipcaps_example)
 #' @keywords label
 "label"
 
@@ -61,7 +61,7 @@
 #' @docType data
 #' @format A matrix with 10 columns and 1,004 rows
 #' @seealso \code{\link{raw.data}} and \code{\link{label}}
-#' @usage data(IPCAPS_example)
+#' @usage data(ipcaps_example)
 #' @keywords PC
 "PC"
 

@@ -4,12 +4,30 @@
 \alias{preprocess}
 \title{(Internal function) Perform the pre-processing step of IPCAPS}
 \usage{
-preprocess(files, label.file, lab.col, rdata.infile, bed.infile, cate.list,
-  result.dir, threshold, min.fst, max.thread = NA, reanalysis = FALSE,
-  method = "mix", min.in.group = 20, datatype = "snp",
-  nonlinear = FALSE, missing.char = NA, regression.file = NA,
-  regression.col.first = NA, regression.col.last = NA,
-  reg.method = "linear", plot.as.pdf = NA, no.plot = NA)
+preprocess(
+  files,
+  label.file,
+  lab.col,
+  rdata.infile,
+  bed.infile,
+  cate.list,
+  result.dir,
+  threshold,
+  min.fst,
+  max.thread = NA,
+  reanalysis = FALSE,
+  method = "mix",
+  min.in.group = 20,
+  datatype = "snp",
+  nonlinear = FALSE,
+  missing.char = NA,
+  regression.file = NA,
+  regression.col.first = NA,
+  regression.col.last = NA,
+  reg.method = "linear",
+  plot.as.pdf = NA,
+  no.plot = NA
+)
 }
 \arguments{
 \item{files}{IPCAPS supports SNPs encoded as 0, 1 and 2 (dosage encoding).

@@ -4,9 +4,11 @@
 \name{label}
 \alias{label}
 \title{Synthetic dataset containing population labels for the dataset \code{raw.data}}
-\format{A vector with 1,004 elements.}
+\format{
+A vector with 1,004 elements.
+}
 \usage{
-data(IPCAPS_example)
+data(ipcaps_example)
 }
 \description{
 A dataset contains a character vector of 1,004 elements containing labels or

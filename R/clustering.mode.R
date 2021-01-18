@@ -47,7 +47,7 @@ clustering.mode <- function(node,work.dir,method){
     cluster=pmm['partition']
   }else if (method == "meanshift"){
     subPCs=as.data.frame(PCs[,1:no.significant.PC])
-    fit <- ms(subPCs, h=0.095, plotms = 1)
+    fit <- ms(subPCs, h=0.095, plot = FALSE)
     cluster=fit$cluster.label
   }else if (method == "apcluster"){
     subPCs=as.data.frame(PCs[,1:no.significant.PC])

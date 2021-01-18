@@ -4,9 +4,17 @@
 \alias{clustering}
 \title{(Internal function) Perform the clustering process of IPCAPS}
 \usage{
-clustering(dataframe, node = 1, result.dir, threshold, min.fst,
-  method = "mix", min.in.group = 20, datatype = "snp",
-  nonlinear = FALSE)
+clustering(
+  dataframe,
+  node = 1,
+  result.dir,
+  threshold,
+  min.fst,
+  method = "mix",
+  min.in.group = 20,
+  datatype = "snp",
+  nonlinear = FALSE
+)
 }
 \arguments{
 \item{dataframe}{A data frame containing \code{raw.data} (matrix or data

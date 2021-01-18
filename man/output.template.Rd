@@ -4,7 +4,9 @@
 \name{output.template}
 \alias{output.template}
 \title{(Internal object) The HTML output template for IPCAPS}
-\format{A list with with 5 objects}
+\format{
+A list with with 5 objects
+}
 \usage{
 output.template
 }

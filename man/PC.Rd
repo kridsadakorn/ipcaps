@@ -5,9 +5,11 @@
 \alias{PC}
 \title{Synthetic dataset containing the top 10 principal components (PC) from the
 dataset \code{raw.data}}
-\format{A matrix with 10 columns and 1,004 rows}
+\format{
+A matrix with 10 columns and 1,004 rows
+}
 \usage{
-data(IPCAPS_example)
+data(ipcaps_example)
 }
 \description{
 A dataset contains a numeric matrix of 1,004 rows and 10 columns of top 10

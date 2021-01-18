@@ -4,9 +4,11 @@
 \name{raw.data}
 \alias{raw.data}
 \title{Synthetic dataset containing single nucleotide polymorphisms (SNP)}
-\format{A matrix with 3,000 columns and 1,004 rows}
+\format{
+A matrix with 3,000 columns and 1,004 rows
+}
 \usage{
-data(IPCAPS_example)
+data(ipcaps_example)
 }
 \description{
 The raw.data is the simulated dataset which consists of 3,000 independent SNPs

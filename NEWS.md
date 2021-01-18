@@ -1,7 +1,7 @@
 ---
 title: "NEWS"
 author: "Kridsadakorn Chaichoompu"
-date: "02/09/2018"
+date: "18s/01/2021"
 output:
   html_document:
     keep_md: yes
@@ -10,6 +10,13 @@ output:
 ---
 
 
+
+# IPCAPS 1.1.8
+
+## Updates
+
+* Updated the package according to R v4.0.2
+* Reduce the sizes of example files
 
 # IPCAPS 1.1.7
 

@@ -5,6 +5,7 @@ date: "11/06/2018"
 output:
   html_document:
     keep_md: yes
+  word_document: default
   pdf_document: default
 ---
 
@@ -48,13 +49,13 @@ Moreover, here is the list of example datasets in the R package ```IPCAPS```:
 
 Lastly, here is the list of example data files included in the directory ```extdata``` of ```IPCAPS```:
 
-* ```IPCAPS_example.bed```
-* ```IPCAPS_example.bim```
-* ```IPCAPS_example.fam```
-* ```IPCAPS_example_PC10.txt```
-* ```IPCAPS_example_individuals.txt```
-* ```IPCAPS_example_rowVar_colInd.txt```
-* ```IPCAPS_example.RData```
+* ```ipcaps_example.bed```
+* ```ipcaps_example.bim```
+* ```ipcaps_example.fam```
+* ```ipcaps_example_PC10.txt.gz```
+* ```ipcaps_example_individuals.txt.gz```
+* ```ipcapsS_example_rowVar_colInd.txt.gz```
+* ```ipcaps_example.rda```
 
 ## Installation
 
