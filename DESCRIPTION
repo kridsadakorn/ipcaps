@@ -12,7 +12,7 @@ RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Imports: stats,utils,graphics,grDevices,MASS,Matrix,expm,KRIS,fpc,LPCM,apcluster,Rmixmod
 Suggests: testthat
-BugReports: https://gitlab.com/kris.ccp/ipcaps/issues
+BugReports: https://gitlab.com/kris.ccp/ipcaps/-/issues
 URL: https://gitlab.com/kris.ccp/ipcaps
 Collate: 
     'parallelization.R'
