@@ -55,7 +55,46 @@ Install the released version of ```IPCAPS``` from CRAN:
 install.packages("IPCAPS")
 ```
 
-## For developemenpers: problem sovling in checking the package as CRAN
+## Document
+
+Please check the reference manual here: [https://chaichoompu.gitlab.io/ipcaps_doc/index.html](https://chaichoompu.gitlab.io/ipcaps_doc/index.html)
+
+## Citation
+
+Please cite our paper as
+
+```
+Chaichoompu, Kridsadakorn, Fentaw Abegaz, Sissades Tongsima, Philip James Shaw, Anavaj Sakuntabhai, Luísa Pereira, and Kristel Van Steen. 2019. “IPCAPS: An R Package for Iterative Pruning to Capture Population Structure.” Source Code for Biology and Medicine 14 (1). https://doi.org/10.1186/s13029-019-0072-6.
+```
+
+Please check how to cite the package
+
+```{r}
+citation("IPCAPS")
+```
+or as below:
+
+```
+To cite IPCAPS in publications use:
+
+  Kridsadakorn Chaichoompu, Fentaw Abegaz, Sissades Tongsima, Philip James Shaw, Anavaj Sakuntabhai, Luisa Pereira, and
+  Kristel Van Steen (2018). KRIS: Keen and Reliable Interface Subroutines for Bioinformatic Analysis. R package version
+  1.1.8. URL: https://CRAN.R-project.org/package=IPCAPS
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {IPCAPS: Iterative Pruning to Capture Population Structure},
+    author = {Kridsadakorn Chaichoompu and Fentaw Abegaz and Sissades Tongsima and Philip James Shaw and Anavaj Sakuntabhai and Luisa Pereira and Kristel {Van Steen}},
+    year = {2018},
+    note = {R package version 1.1.8},
+    url = {https://CRAN.R-project.org/package=IPCAPS},
+  }
+```
+
+## For developers
+
+You may face these problems, some notes here might be useful. 
 
 ### Error of Roxygen2 in building RD files
 
