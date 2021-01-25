@@ -1,158 +1,212 @@
 
-# R Package IPCAPS
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-## Summary
+# IPCAPS <img src="man/figures/ipcaps_logo.png" align="right" />
 
-The R package ```IPCAPS``` is an unsupervised clustering algorithm based on 
-iterative pruning to capture population structure. This version supports ordinal 
-data which can be applied directly to SNP data to identify fine-level population 
-structure and it is built on the iterative pruning Principal Component Analysis 
-(ipPCA) algorithm by Intarapanich et al. (2009) <doi: 10.1186/1471-2105-10-382> 
-and Limpiti et al. (2011)<doi: 10.1186/1471-2105-12-255>. The IPCAPS 
-involves an iterative process using multiple splits based on multivariate 
-Gaussian mixture modeling of principal components and Clustering EM estimation 
-as in Lebret et al. (2015). In each iteration, rough clusters and outliers are 
-also identified using the function ```rubikclust()``` from the R package ```KRIS```.
+<!-- badges: start -->
 
-The R package ```IPCAPS``` requires ```stats```, ```utils```, ```graphics```, 
-```grDevices```, ```MASS```, ```Matrix```, ```expm```, ```KRIS```, ```fpc```, 
-```LPCM```, ```apcluster```, ```Rmixmod```.
+<!-- badges: end -->
 
-Here is the list of functions in the R package ```IPCAPS```:
-
-* ```export.groups```
-* ```get.node.info```
-* ```ipcaps```
-* ```save.eigenplots.html```
-* ```save.html```
-* ```save.plots.cluster.html```
-* ```save.plots.label.html```
-* ```save.plots```
-* ```top.discriminator```
-
-Moreover, here is the list of example datasets in the R package ```IPCAPS```:
-
-* ```label```
-* ```PC```
-* ```raw.data```
-
-Lastly, here is the list of example data files included in the directory ```extdata``` of ```IPCAPS```:
-
-* ```ipcaps_example.bed```
-* ```ipcaps_example.bim```
-* ```ipcaps_example.fam```
-* ```ipcaps_example_PC10.txt.gz```
-* ```ipcaps_example_individuals.txt.gz```
-* ```ipcapsS_example_rowVar_colInd.txt.gz```
-* ```ipcaps_example.rda```
+`IPCAPS` is an unsupervised clustering algorithm based on iterative
+pruning to capture population structure. This version supports ordinal
+data which can be applied directly to SNP data to identify fine-level
+population structure and it is built on the iterative pruning Principal
+Component Analysis (ipPCA) algorithm by Intarapanich et al. (2009)
+\<doi: 10.1186/1471-2105-10-382\> and Limpiti et al. (2011)\<doi:
+10.1186/1471-2105-12-255\>. The IPCAPS involves an iterative process
+using multiple splits based on multivariate Gaussian mixture modeling of
+principal components and Clustering EM estimation as in Lebret et
+al. (2015) \<doi: 10.18637/jss.v067.i06\>. In each iteration, rough
+clusters and outliers are also identified using the function
+`rubikclust()` from the R package `KRIS`.
 
 ## Installation
 
-Install the released version of ```IPCAPS``` from CRAN:
+You can install the released version of IPCAPS from
+[CRAN](https://CRAN.R-project.org) with:
 
-
-```r
+``` r
 install.packages("IPCAPS")
+```
+
+Alternatively, you can install the dev version of IPCAPS from
+[Gitlab](https://gitlab.com/chaichoompu/ipcaps) with
+
+``` r
+install.packages("remotes")
+remotes::install_gitlab("chaichoompu/ipcaps", dependencies = TRUE)
 ```
 
 ## Document
 
-Please check the reference manual here: [https://chaichoompu.gitlab.io/ipcaps_doc/index.html](https://chaichoompu.gitlab.io/ipcaps_doc/index.html)
+You can see the reference manual from:
+<https://chaichoompu.gitlab.io/ipcaps_doc/index.html>
 
-## Citation
+## Example
 
-Please cite our paper as
+This is a basic example which shows you how to use the packages:
 
+``` r
+library(IPCAPS)
+
+BED.file <- system.file("extdata", "ipcaps_example.bed", package = "IPCAPS")
+LABEL.file <- system.file("extdata", "ipcaps_example_individuals.txt.gz",
+                          package = "IPCAPS")
+my.cluster1 <- ipcaps(bed = BED.file, label.file = LABEL.file, lab.col = 2,
+out = tempdir())
+#> Running ... IPCAPS 
+#>  output: /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4 
+#>  label file: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/IPCAPS/extdata/ipcaps_example_individuals.txt.gz
+#>  label column: 2
+#>  threshold: 0.18
+#>  minimum Fst: 8e-04
+#>  maximum thread: 1
+#>  method: mix
+#>  bed: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/IPCAPS/extdata/ipcaps_example.bed
+#>  minimum in group: 20
+#>  data type: snp
+#>  missing: NA
+#> In preprocessing step
+#> Note: the directory '/var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4' is existed. 
+#> The result files will be saved to this directory: /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output 
+#> Input data: 103 individuals, 2000 markers
+#> Start calculating
+#> Node 1: Start the process
+#> Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/condition.RData
+#> Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/rawdata.RData
+#> Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node1.RData
+#> Node 1: Check for splitting
+#> Node 1: Reducing matrix
+#> Node 1: EigenFit = 0.652486925995028, Threshold = 0.18, no. significant PCs = 3
+#> Node 1: Start clustering
+#> Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node1.RData
+#> Node 1: done for clustering
+#> Time difference of 0.11854 secs
+#> Node 1: Checking Fst of group 1 and group 2
+#> Node 1: Checking Fst of group 1 and group 3
+#> Node 1: Checking Fst of group 1 and group 4
+#> Node 1: Checking Fst of group 2 and group 3
+#> Node 1: Checking Fst of group 2 and group 4
+#> Node 1: Checking Fst of group 3 and group 4
+#> Node 1 times took 0.346548080444336 secs
+#> Node 1: 103 individuals were splitted into: 2 groups
+#> Node 1: Return status 0
+#> Node 1: Split to sub-nodes
+#> Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node2.RData
+#> Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node3.RData
+#> Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 1: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 1: Done!
+#> Time difference of 0.617434 secs
+#> Node 2: Start the process
+#> Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/condition.RData
+#> Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/rawdata.RData
+#> Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node2.RData
+#> Node 2: Check for splitting
+#> Node 2: A number of node is lower than the minimum number (20), therefore split was not performed
+#> Node 2: Return status 1
+#> Node 2: No split was performed, Status=1
+#> Node 2: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/leafnode.RData
+#> Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 2: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 2: Done!
+#> Time difference of 0.03329301 secs
+#> Node 3: Start the process
+#> Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/condition.RData
+#> Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/rawdata.RData
+#> Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node3.RData
+#> Node 3: Check for splitting
+#> Node 3: Reducing matrix
+#> Node 3: EigenFit = 0.343228072167861, Threshold = 0.18, no. significant PCs = 3
+#> Node 3: Start clustering
+#> Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node3.RData
+#> Node 3: done for clustering
+#> Time difference of 0.1172371 secs
+#> Node 3: Checking Fst of group 1 and group 2
+#> Node 3 times took 0.15182089805603 secs
+#> Node 3: 100 individuals were splitted into: 2 groups
+#> Node 3: Return status 0
+#> Node 3: Split to sub-nodes
+#> Node 3: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node4.RData
+#> Node 3: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node5.RData
+#> Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 3: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 3: Done!
+#> Time difference of 0.3071558 secs
+#> Node 4: Start the process
+#> Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/condition.RData
+#> Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/rawdata.RData
+#> Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node4.RData
+#> Node 4: Check for splitting
+#> Node 4: Reducing matrix
+#> Node 4: EigenFit = 0.0221170820186458, Threshold = 0.18, no. significant PCs = 
+#> Node 4: No split was performed because EigenFit is lower than threshold
+#> Node 4: Return status 1
+#> Node 4: No split was performed, Status=1
+#> Node 4: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/leafnode.RData
+#> Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 4: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 4: Done!
+#> Time difference of 0.130151 secs
+#> Node 5: Start the process
+#> Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/condition.RData
+#> Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/rawdata.RData
+#> Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/node5.RData
+#> Node 5: Check for splitting
+#> Node 5: Reducing matrix
+#> Node 5: EigenFit = 0.0367738545252401, Threshold = 0.18, no. significant PCs = 
+#> Node 5: No split was performed because EigenFit is lower than threshold
+#> Node 5: Return status 1
+#> Node 5: No split was performed, Status=1
+#> Node 5: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/leafnode.RData
+#> Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 5: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/RData/tree.RData
+#> Node 5: Done!
+#> Time difference of 0.1171911 secs
+#> In post process step
+#> Exporting node 2 as group 1
+#> Exporting node 4 as group 2
+#> Exporting node 5 as group 3
+#> Note: save as /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output/groups.txt
+#> The result files were saved at:  /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output 
+#> Total runtime is 2.92840123176575 sec
 ```
-Chaichoompu, Kridsadakorn, Fentaw Abegaz, Sissades Tongsima, Philip James Shaw, Anavaj Sakuntabhai, Luísa Pereira, and Kristel Van Steen. 2019. “IPCAPS: An R Package for Iterative Pruning to Capture Population Structure.” Source Code for Biology and Medicine 14 (1). https://doi.org/10.1186/s13029-019-0072-6.
+
+The function `ipcaps` does unsupervised clusering, and here is the
+result:
+
+``` r
+table(my.cluster1$cluster$label, my.cluster1$cluster$group)
+#>           
+#>             1  2  3
+#>   outlier3  3  0  0
+#>   pop1      0 50  0
+#>   pop2      0  0 50
 ```
 
-Please check how to cite the package
+The output directory will be indicated in the console or in
+`my.cluster1$output.dir`. All result files are saved at:You can naviage
+to check the `html` visualizations in the output directory.
 
-```{r}
-citation("IPCAPS")
-```
-or as below:
+``` r
+print(my.cluster1$output.dir)
+#> [1] "/var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpVw7ED4/cluster_output"
 
-```
-To cite IPCAPS in publications use:
-
-  Kridsadakorn Chaichoompu, Fentaw Abegaz, Sissades Tongsima, Philip James Shaw, Anavaj Sakuntabhai, Luisa Pereira, and
-  Kristel Van Steen (2018). KRIS: Keen and Reliable Interface Subroutines for Bioinformatic Analysis. R package version
-  1.1.8. URL: https://CRAN.R-project.org/package=IPCAPS
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {IPCAPS: Iterative Pruning to Capture Population Structure},
-    author = {Kridsadakorn Chaichoompu and Fentaw Abegaz and Sissades Tongsima and Philip James Shaw and Anavaj Sakuntabhai and Luisa Pereira and Kristel {Van Steen}},
-    year = {2018},
-    note = {R package version 1.1.8},
-    url = {https://CRAN.R-project.org/package=IPCAPS},
-  }
+list.files(my.cluster1$output.dir)
+#> [1] "groups.txt"                "images"                   
+#> [3] "RData"                     "tree_scatter_cluster.html"
+#> [5] "tree_scatter_label.html"   "tree_scree.html"          
+#> [7] "tree_text.html"
 ```
 
-## For developers
+## About
 
-You may face these problems, some notes here might be useful. 
-
-### Error of Roxygen2 in building RD files
-
-The source codes in this package include the Roxgen's syntax. If there is a 
-problem for generating the RD files (facing some errors) using RStudio (_Build > 
-Document_), try to use ```roxygen2::roxygenise()``` instead of _Build > Document_ 
-from the menu. Alternatively, install the package ```devtools```, then enable 
-RStudio to use the functions from ```devtools``` (check _Build > Configure Build 
-Tools... > use devtools package functions if available_) or run 
-```devtools::document()``` in the console.
-
-### Error of testthat for unit testing
-
-When facing error for ```testthat```, try to update the package ```testthat``` and add 
-```Suggests: testthat``` in _DESCRIPTION_ file.
-
-### Submit package to CRAN
-
-Check the submission using ```R CMD check --as-cran``` and a current version of 
-r-devel, as mandated by the CRAN Repository Policy. (You could do so using the 
-win-builder service at http://win-builder.r-project.org)
-
-## Resubmit new version to CRAN
-
-Check downstream dependencies with ```devtools::revdep_check()```
-
-### Error on checking DESCRIPTION meta-information in Linux
-
-Edit ~/.profile, ~/.bash_profile or ~/.bashrc, then add
-
-export LANG=en_US.UTF-8
-
-export LC_ALL=en_US.UTF-8
-
-## CONTRIBUTOR CODE OF CONDUCT
-
-As contributors and maintainers of this project, we pledge to respect all people 
-who contribute through reporting issues, posting feature requests, updating 
-documentation, submitting pull requests or patches, and other activities.
-
-We are committed to making participation in this project a harassment-free 
-experience for everyone, regardless of level of experience, gender, gender 
-identity and expression, sexual orientation, disability, personal appearance, 
-body size, race, ethnicity, age, or religion.
-
-Examples of unacceptable behavior by participants include the use of sexual 
-language or imagery, derogatory comments or personal attacks, trolling, public 
-or private harassment, insults, or other unprofessional conduct.
-
-Project maintainers have the right and responsibility to remove, edit, or reject 
-comments, commits, code, wiki edits, issues, and other contributions that are 
-not aligned to this Code of Conduct. Project maintainers who do not follow the 
-Code of Conduct may be removed from the project team.
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be 
-reported by opening an issue or contacting one or more of the project 
-maintainers.
-
-This Code of Conduct is adapted from the Contributor Covenant, version 1.0.0, 
-available at https://www.contributor-covenant.org/version/1/0/0/code-of-conduct.html
-
+  - Prof. Kristel Van Steen, visit
+    <a href="http://bio3.giga.ulg.ac.be/" border=0 style="border:0; text-decoration:none; outline:none"><img width="40px" src="man/figures/bio3_logo.png" align="center" /></a><br />
+  - Kridsadakorn Chaichoompu, visit
+    <a href="http://www.biostatgen.org/" border=0 style="border:0; text-decoration:none; outline:none"><img width="110px" src="man/figures/biostatgen_logo.png" align="center" /></a><br />

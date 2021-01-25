@@ -1,0 +1,84 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# IPCAPS <img src="man/figures/ipcaps_logo.png" align="right" />
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+```IPCAPS``` is an unsupervised clustering algorithm based on 
+iterative pruning to capture population structure. This version supports ordinal 
+data which can be applied directly to SNP data to identify fine-level population 
+structure and it is built on the iterative pruning Principal Component Analysis 
+(ipPCA) algorithm by Intarapanich et al. (2009) <doi: 10.1186/1471-2105-10-382> 
+and Limpiti et al. (2011)<doi: 10.1186/1471-2105-12-255>. The IPCAPS 
+involves an iterative process using multiple splits based on multivariate 
+Gaussian mixture modeling of principal components and Clustering EM estimation 
+as in Lebret et al. (2015) <doi: 10.18637/jss.v067.i06>. In each iteration, rough clusters and outliers are 
+also identified using the function ```rubikclust()``` from the R package ```KRIS```.
+
+## Installation
+
+You can install the released version of IPCAPS from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("IPCAPS")
+```
+Alternatively, you can install the dev version of IPCAPS from [Gitlab](https://gitlab.com/chaichoompu/ipcaps) with
+``` r
+install.packages("remotes")
+remotes::install_gitlab("chaichoompu/ipcaps", dependencies = TRUE)
+```
+
+## Document
+
+You can see the reference manual from: [https://chaichoompu.gitlab.io/ipcaps_doc/index.html](https://chaichoompu.gitlab.io/ipcaps_doc/index.html)
+
+## Example
+
+This is a basic example which shows you how to use the packages:
+
+```{r example}
+library(IPCAPS)
+
+BED.file <- system.file("extdata", "ipcaps_example.bed", package = "IPCAPS")
+LABEL.file <- system.file("extdata", "ipcaps_example_individuals.txt.gz",
+                          package = "IPCAPS")
+my.cluster1 <- ipcaps(bed = BED.file, label.file = LABEL.file, lab.col = 2,
+out = tempdir())
+
+```
+
+The function `ipcaps` does unsupervised clusering, and here is the result:
+
+```{r result}
+table(my.cluster1$cluster$label, my.cluster1$cluster$group)
+```
+
+The output directory will be indicated in the console or in `my.cluster1$output.dir`. All result files are saved at:You can naviage to check the `html` visualizations in the output directory.
+
+```{r output}
+print(my.cluster1$output.dir)
+
+list.files(my.cluster1$output.dir)
+```
+
+
+
+## About
+
+* Prof. Kristel Van Steen, visit  <a href="http://bio3.giga.ulg.ac.be/" border=0 style="border:0; text-decoration:none; outline:none"><img width="40px" src="man/figures/bio3_logo.png" align="center" /></a><br />
+* Kridsadakorn Chaichoompu, visit <a href="http://www.biostatgen.org/" border=0 style="border:0; text-decoration:none; outline:none"><img width="110px" src="man/figures/biostatgen_logo.png" align="center" /></a><br />
+

@@ -1,8 +1,8 @@
 Package: IPCAPS
 Type: Package
 Title: Iterative Pruning to Capture Population Structure
-Version: 1.1.8
-Authors@R: c(person(given = "Kridsadakorn", family = "Chaichoompu", email = "kridsadakorn@biostatgen.org", role = c("aut", "cre")), person(given = "Kristel", family = 'Van Steen', role = "aut"), person(given = "Fentaw", family = "Abegaz", role = "aut"), person(given = "Sissades", family = "Tongsima", role = "aut"), person(given = "Philip", family = "Shaw", role = "aut"), person(given = "Anavaj", family = "Sakuntabhai", role = "aut"), person(given = "Luisa", family = "Pereira", role = "aut"))
+Version: 1.1.9
+Authors@R: c(person(given = "Kridsadakorn", family = "Chaichoompu", email = "kridsadakorn@biostatgen.org", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8123-3409")),person(given = "Kristel", family = 'Van Steen', role = "aut", comment = c(ORCID = "0000-0001-9868-5033")),person(given = "Fentaw", family = "Abegaz", role = "aut", comment = c(ORCID = "0000-0002-6294-4360")),person(given = "Sissades", family = "Tongsima", role = "aut", comment = c(ORCID = "0000-0002-1491-1839")),person(given = "Philip", family = "James Shaw", role = "aut"),person(given = "Anavaj", family = "Sakuntabhai", role = "aut", comment = c(ORCID = "0000-0001-9099-6937")),person(given = "Luisa", family = "Pereira", role = "aut", comment = c(ORCID = "0000-0002-4271-1527")))
 Description: An unsupervised clustering algorithm based on iterative pruning is for capturing population structure. This version supports ordinal data which can be applied directly to SNP data to identify fine-level population structure and it is built on the iterative pruning Principal Component Analysis ('ipPCA') algorithm as explained in Intarapanich et al. (2009) <doi:10.1186/1471-2105-10-382>. The 'IPCAPS' involves an iterative process using multiple splits based on multivariate Gaussian mixture modeling of principal components and 'Expectation-Maximization' clustering as explained in Lebret et al. (2015) <doi:10.18637/jss.v067.i06>. In each iteration, rough clusters and outliers are also identified using the function rubikclust() from the R package 'KRIS'.
 Depends: R (>= 3.5.0)
 License: GPL-3
@@ -12,8 +12,8 @@ RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Imports: stats,utils,graphics,grDevices,MASS,Matrix,expm,KRIS,fpc,LPCM,apcluster,Rmixmod
 Suggests: testthat
-BugReports: https://gitlab.com/kris.ccp/ipcaps/-/issues
-URL: https://gitlab.com/kris.ccp/ipcaps
+BugReports: https://gitlab.com/chaichoompu/ipcaps/-/issues
+URL: https://gitlab.com/chaichoompu/ipcaps
 Collate: 
     'parallelization.R'
     'check.stopping.R'
