@@ -1,15 +1,3 @@
----
-title: "NEWS"
-author: "Kridsadakorn Chaichoompu"
-date: "18s/01/2021"
-output:
-  html_document:
-    keep_md: yes
-  word_document: default
-  pdf_document: default
----
-
-
 
 # IPCAPS 1.1.8
 

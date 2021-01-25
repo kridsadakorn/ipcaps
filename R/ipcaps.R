@@ -146,25 +146,25 @@
 #'
 #' table(my.cluster1$cluster$label, my.cluster1$cluster$group)
 #'
-#' # Use a text file as input
+#' # Alternatively, use a text file as input
 #' # Use the example files embedded in the package
 #'
-#' text.file <- system.file("extdata", "ipcaps_example_rowVar_colInd.txt.gz",
-#'                          package="IPCAPS")
-#' LABEL.file <- system.file("extdata", "ipcaps_example_individuals.txt.gz",
-#'                           package="IPCAPS")
+#' #text.file <- system.file("extdata", "ipcaps_example_rowVar_colInd.txt.gz",
+#' #                          package="IPCAPS")
+#' #LABEL.file <- system.file("extdata", "ipcaps_example_individuals.txt.gz",
+#' #                           package="IPCAPS")
 #'
-#' my.cluster2 <- ipcaps(files = c(text.file), label.file = LABEL.file, lab.col = 2,
-#'                       out=tempdir())
-#' table(my.cluster2$cluster$label, my.cluster2$cluster$group)
+#' #my.cluster2 <- ipcaps(files = c(text.file), label.file = LABEL.file, lab.col = 2,
+#' #                       out=tempdir())
+#' #table(my.cluster2$cluster$label, my.cluster2$cluster$group)
 #'
-#' # Use an R Data file as input
+#' # The other alternative way, use an R Data file as input
 #' # Use the example file embedded in the package
 #'
-#' rdata.file <- system.file("extdata", "ipcaps_example.rda", package = "IPCAPS")
+#' #rdata.file <- system.file("extdata", "ipcaps_example.rda", package = "IPCAPS")
 #'
-#' my.cluster3 <- ipcaps(rdata = rdata.file, out = tempdir())
-#' table(my.cluster3$cluster$label, my.cluster3$cluster$group)
+#' #my.cluster3 <- ipcaps(rdata = rdata.file, out = tempdir())
+#' #table(my.cluster3$cluster$label, my.cluster3$cluster$group)
 #'
 ipcaps <- function( bed = NA, rdata = NA, files = NA, label.file = NA,
                     lab.col = 1, out, plot.as.pdf = FALSE, method = 'mix',

@@ -1,15 +1,3 @@
----
-title: "README"
-author: "Kridsadakorn Chaichoompu"
-date: "11/06/2018"
-output:
-  html_document:
-    keep_md: yes
-  word_document: default
-  pdf_document: default
----
-
-
 
 # R Package IPCAPS
 
@@ -19,7 +7,8 @@ The R package ```IPCAPS``` is an unsupervised clustering algorithm based on
 iterative pruning to capture population structure. This version supports ordinal 
 data which can be applied directly to SNP data to identify fine-level population 
 structure and it is built on the iterative pruning Principal Component Analysis 
-(ipPCA) algorithm (Intarapanich et al., 2009; Limpiti et al., 2011). The IPCAPS 
+(ipPCA) algorithm by Intarapanich et al. (2009) <doi: 10.1186/1471-2105-10-382> 
+and Limpiti et al. (2011)<doi: 10.1186/1471-2105-12-255>. The IPCAPS 
 involves an iterative process using multiple splits based on multivariate 
 Gaussian mixture modeling of principal components and Clustering EM estimation 
 as in Lebret et al. (2015). In each iteration, rough clusters and outliers are 
