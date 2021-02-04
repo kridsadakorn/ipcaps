@@ -42,15 +42,15 @@ You can install the released version of IPCAPS from [CRAN](https://CRAN.R-projec
 ``` r
 install.packages("IPCAPS")
 ```
-Alternatively, you can install the dev version of IPCAPS from [Gitlab](https://gitlab.com/chaichoompu/ipcaps) with
+Alternatively, you can install the dev version of IPCAPS from [Gitlab](https://github.com/kridsadakorn/ipcaps) with
 ``` r
 install.packages("remotes")
-remotes::install_gitlab("chaichoompu/ipcaps", dependencies = TRUE)
+remotes::install_github("kridsadakorn/ipcaps", dependencies = TRUE)
 ```
 
 ## Document
 
-You can see the reference manual from: [https://chaichoompu.gitlab.io/ipcaps_doc/index.html](https://chaichoompu.gitlab.io/ipcaps_doc/index.html)
+You can see the reference manual from: [https://www.biostatgen.org/ipcaps/](https://www.biostatgen.org/ipcaps/)
 
 ## Example
 
@@ -86,5 +86,5 @@ list.files(my.cluster1$output.dir)
 ## About
 
 * Prof. Kristel Van Steen, visit  <a href="http://bio3.giga.ulg.ac.be/" border=0 style="border:0; text-decoration:none; outline:none"><img width="40px" src="man/figures/bio3_logo.png" align="center" /></a><br />
-* Kridsadakorn Chaichoompu, visit <a href="http://www.biostatgen.org/" border=0 style="border:0; text-decoration:none; outline:none"><img width="110px" src="man/figures/biostatgen_logo.png" align="center" /></a><br />
+* Kridsadakorn Chaichoompu, visit <a href="https://www.biostatgen.org/" border=0 style="border:0; text-decoration:none; outline:none"><img width="110px" src="man/figures/biostatgen_logo.png" align="center" /></a><br />
 
