@@ -58,8 +58,8 @@ principal component analysis and structure. BMC Bioinformatics 12, 255.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://gitlab.com/chaichoompu/ipcaps}
-  \item Report bugs at \url{https://gitlab.com/chaichoompu/ipcaps/-/issues}
+  \item \url{https://github.com/kridsadakorn/ipcaps}
+  \item Report bugs at \url{https://github.com/kridsadakorn/ipcaps/issues}
 }
 
 }
