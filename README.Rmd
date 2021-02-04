@@ -16,6 +16,11 @@ knitr::opts_chunk$set(
 # IPCAPS <img src="man/figures/ipcaps_logo.png" align="right" />
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/kridsadakorn/ipcaps/workflows/R-CMD-check/badge.svg)](https://github.com/kridsadakorn/ipcaps/actions)
+[![CRAN status](https://www.r-pkg.org/badges/version/IPCAPS)](https://CRAN.R-project.org/package=IPCAPS)
+[![codecov](https://codecov.io/gh/kridsadakorn/ipcaps/branch/master/graph/badge.svg?token=GGF640V5QY)](https://codecov.io/gh/kridsadakorn/ipcaps)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
 ```IPCAPS``` is an unsupervised clustering algorithm based on 

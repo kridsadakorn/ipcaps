@@ -12,8 +12,8 @@ RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Imports: stats,utils,graphics,grDevices,MASS,Matrix,expm,KRIS,fpc,LPCM,apcluster,Rmixmod
 Suggests: testthat
-BugReports: https://gitlab.com/chaichoompu/ipcaps/-/issues
-URL: https://gitlab.com/chaichoompu/ipcaps
+BugReports: https://github.com/kridsadakorn/ipcaps/issues
+URL: https://github.com/kridsadakorn/ipcaps
 Collate: 
     'parallelization.R'
     'check.stopping.R'
