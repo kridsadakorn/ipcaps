@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 [![codecov](https://codecov.io/gh/kridsadakorn/ipcaps/branch/master/graph/badge.svg?token=GGF640V5QY)](https://codecov.io/gh/kridsadakorn/ipcaps)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![DOI](https://zenodo.org/badge/333291312.svg)](https://zenodo.org/badge/latestdoi/333291312)
 <!-- badges: end -->
 
 ```IPCAPS``` is an unsupervised clustering algorithm based on 
