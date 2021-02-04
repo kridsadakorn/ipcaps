@@ -89,7 +89,7 @@
 <p>You can install the released version of IPCAPS from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"IPCAPS"</span><span class="op">)</span></code></pre></div>
-<p>Alternatively, you can install the dev version of IPCAPS from <a href="https://github.com/kridsadakorn/ipcaps">Gitlab</a> with</p>
+<p>Alternatively, you can install the dev version of IPCAPS from <a href="https://github.com/kridsadakorn/ipcaps">Github</a> with</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"kridsadakorn/ipcaps"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
@@ -112,7 +112,7 @@
 <span class="va">my.cluster1</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ipcaps.html">ipcaps</a></span><span class="op">(</span>bed <span class="op">=</span> <span class="va">BED.file</span>, label.file <span class="op">=</span> <span class="va">LABEL.file</span>, lab.col <span class="op">=</span> <span class="fl">2</span>,
 out <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Running ... IPCAPS </span>
-<span class="co">#&gt;  output: /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi </span>
+<span class="co">#&gt;  output: /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ </span>
 <span class="co">#&gt;  label file: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/IPCAPS/extdata/ipcaps_example_individuals.txt.gz</span>
 <span class="co">#&gt;  label column: 2</span>
 <span class="co">#&gt;  threshold: 0.18</span>
@@ -124,146 +124,146 @@ out <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/t
 <span class="co">#&gt;  data type: snp</span>
 <span class="co">#&gt;  missing: NA</span>
 <span class="co">#&gt; In preprocessing step</span>
-<span class="co">#&gt; Note: the directory '/var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi' is existed. </span>
-<span class="co">#&gt; The result files will be saved to this directory: /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output </span>
+<span class="co">#&gt; Note: the directory '/var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ' is existed. </span>
+<span class="co">#&gt; The result files will be saved to this directory: /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output </span>
 <span class="co">#&gt; Input data: 103 individuals, 2000 markers</span>
 <span class="co">#&gt; Start calculating</span>
 <span class="co">#&gt; Node 1: Start the process</span>
-<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node1.RData</span>
+<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node1.RData</span>
 <span class="co">#&gt; Node 1: Check for splitting</span>
 <span class="co">#&gt; Node 1: Reducing matrix</span>
 <span class="co">#&gt; Node 1: EigenFit = 0.652486925995028, Threshold = 0.18, no. significant PCs = 3</span>
 <span class="co">#&gt; Node 1: Start clustering</span>
-<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node1.RData</span>
+<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node1.RData</span>
 <span class="co">#&gt; Node 1: done for clustering</span>
-<span class="co">#&gt; Time difference of 0.119556 secs</span>
+<span class="co">#&gt; Time difference of 0.1221311 secs</span>
 <span class="co">#&gt; Node 1: Checking Fst of group 1 and group 2</span>
 <span class="co">#&gt; Node 1: Checking Fst of group 1 and group 3</span>
 <span class="co">#&gt; Node 1: Checking Fst of group 1 and group 4</span>
 <span class="co">#&gt; Node 1: Checking Fst of group 2 and group 3</span>
 <span class="co">#&gt; Node 1: Checking Fst of group 2 and group 4</span>
 <span class="co">#&gt; Node 1: Checking Fst of group 3 and group 4</span>
-<span class="co">#&gt; Node 1 times took 0.341170072555542 secs</span>
+<span class="co">#&gt; Node 1 times took 0.350982904434204 secs</span>
 <span class="co">#&gt; Node 1: 103 individuals were splitted into: 4 groups</span>
 <span class="co">#&gt; Node 1: Return status 0</span>
 <span class="co">#&gt; Node 1: Split to sub-nodes</span>
-<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node2.RData</span>
-<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node3.RData</span>
-<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node4.RData</span>
-<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node5.RData</span>
-<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 1: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node2.RData</span>
+<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node3.RData</span>
+<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node4.RData</span>
+<span class="co">#&gt; Node 1: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node5.RData</span>
+<span class="co">#&gt; Node 1: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 1: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 1: Done!</span>
-<span class="co">#&gt; Time difference of 0.6021891 secs</span>
+<span class="co">#&gt; Time difference of 0.6124501 secs</span>
 <span class="co">#&gt; Node 2: Start the process</span>
-<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node2.RData</span>
+<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node2.RData</span>
 <span class="co">#&gt; Node 2: Check for splitting</span>
 <span class="co">#&gt; Node 2: A number of node is lower than the minimum number (20), therefore split was not performed</span>
 <span class="co">#&gt; Node 2: Return status 1</span>
 <span class="co">#&gt; Node 2: No split was performed, Status=1</span>
-<span class="co">#&gt; Node 2: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/leafnode.RData</span>
-<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 2: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 2: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/leafnode.RData</span>
+<span class="co">#&gt; Node 2: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 2: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 2: Done!</span>
-<span class="co">#&gt; Time difference of 0.03556299 secs</span>
+<span class="co">#&gt; Time difference of 0.03211594 secs</span>
 <span class="co">#&gt; Node 3: Start the process</span>
-<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node3.RData</span>
+<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node3.RData</span>
 <span class="co">#&gt; Node 3: Check for splitting</span>
 <span class="co">#&gt; Node 3: A number of node is lower than the minimum number (20), therefore split was not performed</span>
 <span class="co">#&gt; Node 3: Return status 1</span>
 <span class="co">#&gt; Node 3: No split was performed, Status=1</span>
-<span class="co">#&gt; Node 3: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/leafnode.RData</span>
-<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 3: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 3: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/leafnode.RData</span>
+<span class="co">#&gt; Node 3: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 3: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 3: Done!</span>
-<span class="co">#&gt; Time difference of 0.03619218 secs</span>
+<span class="co">#&gt; Time difference of 0.03001809 secs</span>
 <span class="co">#&gt; Node 4: Start the process</span>
-<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node4.RData</span>
+<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node4.RData</span>
 <span class="co">#&gt; Node 4: Check for splitting</span>
 <span class="co">#&gt; Node 4: A number of node is lower than the minimum number (20), therefore split was not performed</span>
 <span class="co">#&gt; Node 4: Return status 1</span>
 <span class="co">#&gt; Node 4: No split was performed, Status=1</span>
-<span class="co">#&gt; Node 4: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/leafnode.RData</span>
-<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 4: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 4: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/leafnode.RData</span>
+<span class="co">#&gt; Node 4: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 4: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 4: Done!</span>
-<span class="co">#&gt; Time difference of 0.03318405 secs</span>
+<span class="co">#&gt; Time difference of 0.02864623 secs</span>
 <span class="co">#&gt; Node 5: Start the process</span>
-<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node5.RData</span>
+<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node5.RData</span>
 <span class="co">#&gt; Node 5: Check for splitting</span>
 <span class="co">#&gt; Node 5: Reducing matrix</span>
 <span class="co">#&gt; Node 5: EigenFit = 0.343228072167861, Threshold = 0.18, no. significant PCs = 3</span>
 <span class="co">#&gt; Node 5: Start clustering</span>
-<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node5.RData</span>
+<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node5.RData</span>
 <span class="co">#&gt; Node 5: done for clustering</span>
-<span class="co">#&gt; Time difference of 0.1220381 secs</span>
+<span class="co">#&gt; Time difference of 0.1035459 secs</span>
 <span class="co">#&gt; Node 5: Checking Fst of group 1 and group 2</span>
-<span class="co">#&gt; Node 5 times took 0.175257921218872 secs</span>
+<span class="co">#&gt; Node 5 times took 0.153268098831177 secs</span>
 <span class="co">#&gt; Node 5: 100 individuals were splitted into: 2 groups</span>
 <span class="co">#&gt; Node 5: Return status 0</span>
 <span class="co">#&gt; Node 5: Split to sub-nodes</span>
-<span class="co">#&gt; Node 5: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node6.RData</span>
-<span class="co">#&gt; Node 5: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node7.RData</span>
-<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 5: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 5: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node6.RData</span>
+<span class="co">#&gt; Node 5: Saving /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node7.RData</span>
+<span class="co">#&gt; Node 5: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 5: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 5: Done!</span>
-<span class="co">#&gt; Time difference of 0.3381939 secs</span>
+<span class="co">#&gt; Time difference of 0.3028221 secs</span>
 <span class="co">#&gt; Node 6: Start the process</span>
-<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node6.RData</span>
+<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node6.RData</span>
 <span class="co">#&gt; Node 6: Check for splitting</span>
 <span class="co">#&gt; Node 6: Reducing matrix</span>
 <span class="co">#&gt; Node 6: EigenFit = 0.0221170820186458, Threshold = 0.18, no. significant PCs = </span>
 <span class="co">#&gt; Node 6: No split was performed because EigenFit is lower than threshold</span>
 <span class="co">#&gt; Node 6: Return status 1</span>
 <span class="co">#&gt; Node 6: No split was performed, Status=1</span>
-<span class="co">#&gt; Node 6: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/leafnode.RData</span>
-<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 6: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 6: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/leafnode.RData</span>
+<span class="co">#&gt; Node 6: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 6: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 6: Done!</span>
-<span class="co">#&gt; Time difference of 0.1151199 secs</span>
+<span class="co">#&gt; Time difference of 0.1033342 secs</span>
 <span class="co">#&gt; Node 7: Start the process</span>
-<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/condition.RData</span>
-<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/rawdata.RData</span>
-<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/node7.RData</span>
+<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/condition.RData</span>
+<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/rawdata.RData</span>
+<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/node7.RData</span>
 <span class="co">#&gt; Node 7: Check for splitting</span>
 <span class="co">#&gt; Node 7: Reducing matrix</span>
 <span class="co">#&gt; Node 7: EigenFit = 0.0367738545252401, Threshold = 0.18, no. significant PCs = </span>
 <span class="co">#&gt; Node 7: No split was performed because EigenFit is lower than threshold</span>
 <span class="co">#&gt; Node 7: Return status 1</span>
 <span class="co">#&gt; Node 7: No split was performed, Status=1</span>
-<span class="co">#&gt; Node 7: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/leafnode.RData</span>
-<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
-<span class="co">#&gt; Node 7: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 7: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/leafnode.RData</span>
+<span class="co">#&gt; Node 7: Loading /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
+<span class="co">#&gt; Node 7: Updating /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/RData/tree.RData</span>
 <span class="co">#&gt; Node 7: Done!</span>
-<span class="co">#&gt; Time difference of 0.1278901 secs</span>
+<span class="co">#&gt; Time difference of 0.1264 secs</span>
 <span class="co">#&gt; In post process step</span>
 <span class="co">#&gt; Exporting node 2 as group 1</span>
 <span class="co">#&gt; Exporting node 3 as group 2</span>
 <span class="co">#&gt; Exporting node 4 as group 3</span>
 <span class="co">#&gt; Exporting node 6 as group 4</span>
 <span class="co">#&gt; Exporting node 7 as group 5</span>
-<span class="co">#&gt; Note: save as /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output/groups.txt</span>
-<span class="co">#&gt; The result files were saved at:  /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output </span>
-<span class="co">#&gt; Total runtime is 2.40466594696045 sec</span></code></pre></div>
+<span class="co">#&gt; Note: save as /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output/groups.txt</span>
+<span class="co">#&gt; The result files were saved at:  /var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output </span>
+<span class="co">#&gt; Total runtime is 2.32541418075562 sec</span></code></pre></div>
 <p>The function <code>ipcaps</code> does unsupervised clusering, and here is the result:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">my.cluster1</span><span class="op">$</span><span class="va">cluster</span><span class="op">$</span><span class="va">label</span>, <span class="va">my.cluster1</span><span class="op">$</span><span class="va">cluster</span><span class="op">$</span><span class="va">group</span><span class="op">)</span>
@@ -275,7 +275,7 @@ out <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/t
 <p>The output directory will be indicated in the console or in <code>my.cluster1$output.dir</code>. All result files are saved at:You can naviage to check the <code>html</code> visualizations in the output directory.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">my.cluster1</span><span class="op">$</span><span class="va">output.dir</span><span class="op">)</span>
-<span class="co">#&gt; [1] "/var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmpfEa4wi/cluster_output"</span>
+<span class="co">#&gt; [1] "/var/folders/sp/hhmj9xvx53z4g4dktf5f503r0000gp/T//RtmplUe8ZJ/cluster_output"</span>
 
 <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="va">my.cluster1</span><span class="op">$</span><span class="va">output.dir</span><span class="op">)</span>
 <span class="co">#&gt; [1] "groups.txt"                "images"                   </span>

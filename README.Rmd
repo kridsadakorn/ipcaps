@@ -42,7 +42,7 @@ You can install the released version of IPCAPS from [CRAN](https://CRAN.R-projec
 ``` r
 install.packages("IPCAPS")
 ```
-Alternatively, you can install the dev version of IPCAPS from [Gitlab](https://github.com/kridsadakorn/ipcaps) with
+Alternatively, you can install the dev version of IPCAPS from [Github](https://github.com/kridsadakorn/ipcaps) with
 ``` r
 install.packages("remotes")
 remotes::install_github("kridsadakorn/ipcaps", dependencies = TRUE)
