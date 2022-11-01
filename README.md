@@ -51,6 +51,17 @@ remotes::install_github("kridsadakorn/ipcaps", dependencies = TRUE)
 You can see the reference manual from:
 <https://www.biostatgen.org/ipcaps/>
 
+## Extra Supplementary Information for the IPCAPS paper
+
+**Fine-scale subpopulation detection via an SNP-based unsupervised
+method: A case study on the 1000 Genomes Project resources**
+
+*Kridsadakorn Chaichoompu, Alisa Wilantho, Pongsakorn Wangkumhang,
+Sissades Tongsima, Bruno Cavadas, Luísa Pereira, and Kristel Van Steen*
+
+You can see the extra supplementary information from:
+<https://www.biostatgen.org/paper_ipcaps/>
+
 ## Example
 
 This is a basic example which shows you how to use the packages:
