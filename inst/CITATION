@@ -8,7 +8,7 @@ citEntry(entry = "Manual",
   author       = personList(person(given = "Kridsadakorn", family = "Chaichoompu"),
   person(given = "Fentaw", family = "Abegaz"),
   person(given = "Sissades", family = "Tongsima"),
-  person(given = "Philip", family = "Shaw", middle = "James"),
+  person(given = "Philip James", family = "Shaw"),
   person(given = "Anavaj", family = "Sakuntabhai"),
   person(given = "Luisa", family = "Pereira"),
   person(given = "Kristel", family = 'Van Steen')

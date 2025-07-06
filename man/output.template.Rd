@@ -3,7 +3,7 @@
 \docType{data}
 \name{output.template}
 \alias{output.template}
-\title{(Internal object) The HTML output template for IPCAPS}
+\title{Internal Output Template}
 \format{
 A list with with 5 objects
 }
@@ -11,6 +11,11 @@ A list with with 5 objects
 output.template
 }
 \description{
+This object defines a common template for generating output messages or structures within the IPCAPS package.
+}
+\details{
+(Internal object) The HTML output template for IPCAPS
+
 \code{output.template} contains \code{$lno_title}, \code{$lno_data},
 \code{$lno_leafnode}, \code{$lno_body}, and \code{$template} as explained
 below:
@@ -25,5 +30,7 @@ section in the HTML file is replaced.}
 the HTML file is replaced.}
 \item{template}{A vector of characters for HTML file.}
 }
+
+This is a list of HTML output template.
 }
-\keyword{output.template}
+\keyword{internal}

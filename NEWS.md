@@ -1,3 +1,15 @@
+# IPCAPS 1.1.10
+
+* Updated the package according to this issue
+```
+Problems when reading CITATION file:
+  It is recommended to use ‘given’ instead of ‘middle’.
+```
+* Updated output.template.R, according to the error from Roxygen
+
+# IPCAPS 1.1.9
+
+* Update the package according to R v4.1.3
 
 # IPCAPS 1.1.8
 

@@ -16,10 +16,12 @@
 #' }
 #'
 #' @name output.template
+#' @title Internal Output Template
 #' @docType data
+#' @description This object defines a common template for generating output messages or structures within the IPCAPS package.
+#' @details This is a list of HTML output template.
 #' @format A list with with 5 objects
-#' @keywords output.template
-"output.template"
+#' @keywords internal
 
 output.template = list()
 output.template$lno_title = 4
